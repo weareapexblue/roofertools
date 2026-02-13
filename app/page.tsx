@@ -54,7 +54,7 @@ export default function HomePage() {
     <div className="mx-auto w-full max-w-7xl space-y-20 px-6 py-16 sm:py-20">
       <JsonLd data={organizationSchema} />
 
-      <section className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-12">
+      <section className="motion-reveal relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-12">
         <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[color:color-mix(in_srgb,var(--accent)_20%,transparent)] blur-3xl" />
         <div className="absolute -bottom-20 left-20 h-56 w-56 rounded-full bg-[color:color-mix(in_srgb,var(--accent)_12%,transparent)] blur-3xl" />
 
@@ -71,7 +71,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-4">
+          <div className="stagger-grid grid gap-3 sm:grid-cols-4">
             <MetricCard label="Products" value="5" detail="Direct checkout" />
             <MetricCard label="Purchase Options" value="8" detail="One-time + monthly" />
             <MetricCard label="SEO Playbooks" value="20" detail="Long-form resources" />
@@ -111,7 +111,7 @@ export default function HomePage() {
           description="Each asset is mapped to a specific layer: search authority, distribution reach, local visibility, conversion architecture, or measurement control."
         />
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="stagger-grid grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <LayerCard
             title="Authority"
             detail="Premium backlink placements mapped to service and city priorities."
@@ -138,9 +138,9 @@ export default function HomePage() {
           description="Transparent scope, fixed deliverables, and direct purchase flow. No consultation required before checkout."
         />
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="stagger-grid grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {quickOffers.map((offer) => (
-            <div key={`${offer.productId}-${offer.offerId}`} className="space-y-3">
+            <div key={`${offer.productId}-${offer.offerId}`} className="motion-reveal space-y-3">
               <ProductCard
                 productId={offer.productId}
                 offerId={offer.offerId}
@@ -163,7 +163,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-4 lg:grid-cols-3">
+      <section className="motion-reveal rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-7 sm:p-8">
+        <div className="grid gap-5 md:grid-cols-[1.5fr_auto] md:items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+              Enterprise Request
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text)] sm:text-3xl">
+              Looking for Aggressive Multi-Location SEO?
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+              Contact us and go to the form to submit your market count, target cities, and growth objective.
+            </p>
+          </div>
+          <Link
+            href="/contact#contact-form"
+            className="motion-pulse inline-flex h-fit rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-strong)]"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </section>
+
+      <section className="stagger-grid grid gap-4 lg:grid-cols-3">
         <InfoPanel
           title="Free Tools"
           subtitle="ROI, Storm Revenue, Cost Comparison"
@@ -224,7 +246,7 @@ export default function HomePage() {
           title="Featured Resource Guides"
           description="High-value niche pages designed for search coverage and practical execution."
         />
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="stagger-grid grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {featuredResourceList.map((resource) => (
             <Link
               key={resource.slug}
@@ -247,7 +269,7 @@ export default function HomePage() {
           title="Latest Roofing Marketing Articles"
           description="Practical analysis for SEO performance, authority development, and conversion operations."
         />
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="stagger-grid grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {featuredBlog.map((post) => (
             <Link
               key={post.slug}
@@ -264,27 +286,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-7 sm:p-8">
-        <div className="grid gap-5 md:grid-cols-[1.5fr_auto] md:items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
-              Enterprise Request
-            </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text)] sm:text-3xl">
-              Looking for Aggressive Multi-Location SEO?
-            </h2>
-            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-              Contact us and go to the form to submit your market count, target cities, and growth objective.
-            </p>
-          </div>
-          <Link
-            href="/contact#contact-form"
-            className="inline-flex h-fit rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-strong)]"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
@@ -299,7 +300,7 @@ function MetricCard({
   detail: string;
 }) {
   return (
-    <article className="rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-4">
+    <article className="motion-lift rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-4">
       <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--muted)]">{label}</p>
       <p className="mt-1 text-2xl font-semibold tracking-tight text-[var(--text)]">{value}</p>
       <p className="mt-1 text-xs text-[var(--muted)]">{detail}</p>
@@ -309,7 +310,7 @@ function MetricCard({
 
 function LayerCard({ title, detail }: { title: string; detail: string }) {
   return (
-    <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+    <article className="motion-lift rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
       <h3 className="text-base font-semibold tracking-tight text-[var(--text)]">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{detail}</p>
     </article>
@@ -332,7 +333,7 @@ function InfoPanel({
   return (
     <Link
       href={href}
-      className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
+      className="motion-lift rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
     >
       <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">{title}</p>
       <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text)]">{subtitle}</h2>
@@ -352,7 +353,7 @@ function TimelineCard({
   copy: string;
 }) {
   return (
-    <li className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+    <li className="motion-lift rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
       <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">Step {step}</p>
       <h3 className="mt-2 text-lg font-semibold tracking-tight text-[var(--text)]">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{copy}</p>
