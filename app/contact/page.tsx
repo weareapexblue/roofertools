@@ -1,5 +1,6 @@
 import { ContactIntakeForm } from "@/components/contact-intake-form";
 import { buildMetadata } from "@/lib/seo";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Contact | Multi-Location Roofing SEO",
@@ -24,6 +25,13 @@ export default function ContactPage() {
           <p className="mt-4 text-sm leading-8 text-[var(--muted)] sm:text-base">
             Use this form to submit expansion scope, target markets, and rollout priorities.
             This intake is optimized for roofing operators scaling across multiple cities.
+          </p>
+          <p className="mt-3 text-sm leading-8 text-[var(--muted)] sm:text-base">
+            Prefer email?
+            {" "}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-[var(--accent)]">
+              {CONTACT_EMAIL}
+            </a>
           </p>
         </div>
       </section>

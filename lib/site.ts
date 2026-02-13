@@ -6,6 +6,8 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
   "https://roofermarketingtools.com";
 
+export const CONTACT_EMAIL = "team@roofermarketingtools.com";
+
 export const NAV_LINKS = [
   { href: "/backlinks", label: "Backlinks" },
   { href: "/press-releases", label: "Press Releases" },
@@ -14,7 +16,6 @@ export const NAV_LINKS = [
   { href: "/free-tools", label: "Free Tools" },
   { href: "/resources", label: "Resources" },
   { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
 ] as const;
 
 export const FOOTER_LINKS = {

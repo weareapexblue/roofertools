@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { FOOTER_LINKS } from "@/lib/site";
+import { CONTACT_EMAIL, FOOTER_LINKS } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -55,6 +55,16 @@ export function SiteFooter() {
                 rel="noreferrer"
               >
                 Apex Blue AI
+              </a>
+            </li>
+            <li>
+              Contact:
+              {" "}
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="font-semibold text-[var(--accent)]"
+              >
+                {CONTACT_EMAIL}
               </a>
             </li>
           </ul>
