@@ -72,6 +72,9 @@ export function SiloOverview({
                   priceLabel={offer.priceLabel}
                   description={offer.description}
                   buttonLabel={product.ctaLabel}
+                  ctaSupport={product.ctaSupport}
+                  billingMode={offer.mode}
+                  trustPoints={product.ctaTrustPoints}
                 />
                 <Link
                   href={`/${product.silo}/${product.slug}`}

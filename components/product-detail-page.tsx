@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { FaqSection } from "@/components/faq-section";
 import { ProductCard } from "@/components/product-card";
+import { PurchaseButton } from "@/components/purchase-button";
 import { SectionHeading } from "@/components/section-heading";
 import type { Product } from "@/lib/products";
 
@@ -11,6 +12,8 @@ type ProductDetailPageProps = {
 };
 
 export function ProductDetailPage({ product, siblingLinks }: ProductDetailPageProps) {
+  const recommendedOffer = product.offers[0];
+
   return (
     <div className="mx-auto w-full max-w-7xl space-y-12 px-6 py-16 sm:py-20">
       <section className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-10">
@@ -138,6 +141,44 @@ export function ProductDetailPage({ product, siblingLinks }: ProductDetailPagePr
         </article>
       </section>
 
+      <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+          Checkout Confidence
+        </h2>
+        <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+          {product.ctaSupport}
+        </p>
+        <div className="mt-5 grid gap-3 md:grid-cols-3">
+          {product.ctaTrustPoints.map((point) => (
+            <div
+              key={point}
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] px-4 py-3 text-sm text-[var(--muted)]"
+            >
+              {point}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+            Recommended Start
+          </p>
+          <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-base font-semibold text-[var(--text)]">{recommendedOffer.name}</p>
+              <p className="text-sm text-[var(--muted)]">{recommendedOffer.priceLabel}</p>
+            </div>
+            <div className="w-full sm:w-64">
+              <PurchaseButton
+                productId={product.id}
+                offerId={recommendedOffer.id}
+                label={product.ctaLabel}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
         <SectionHeading
           eyebrow="Pricing"
@@ -154,6 +195,9 @@ export function ProductDetailPage({ product, siblingLinks }: ProductDetailPagePr
               priceLabel={offer.priceLabel}
               description={offer.description}
               buttonLabel={product.ctaLabel}
+              ctaSupport={product.ctaSupport}
+              billingMode={offer.mode}
+              trustPoints={product.ctaTrustPoints}
             />
           ))}
         </div>
@@ -180,6 +224,25 @@ export function ProductDetailPage({ product, siblingLinks }: ProductDetailPagePr
               {item.label}
             </Link>
           ))}
+        </div>
+      </section>
+
+      <div className="h-20 sm:hidden" />
+      <section className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--border)] bg-[color:color-mix(in_srgb,var(--surface)_94%,transparent)] p-3 backdrop-blur sm:hidden">
+        <div className="mx-auto flex w-full max-w-7xl items-center gap-3">
+          <div className="min-w-0">
+            <p className="truncate text-xs font-semibold uppercase tracking-[0.1em] text-[var(--muted)]">
+              {recommendedOffer.name}
+            </p>
+            <p className="text-sm font-semibold text-[var(--text)]">{recommendedOffer.priceLabel}</p>
+          </div>
+          <div className="ml-auto w-48">
+            <PurchaseButton
+              productId={product.id}
+              offerId={recommendedOffer.id}
+              label={product.ctaLabel}
+            />
+          </div>
         </div>
       </section>
     </div>

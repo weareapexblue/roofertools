@@ -34,6 +34,9 @@ export default function HomePage() {
       priceLabel: offer.priceLabel,
       description: offer.description,
       buttonLabel: product.ctaLabel,
+      ctaSupport: product.ctaSupport,
+      billingMode: offer.mode,
+      trustPoints: product.ctaTrustPoints,
       href: `/${product.silo}/${product.slug}`,
     }))
   );
@@ -80,7 +83,13 @@ export default function HomePage() {
               href="/backlinks"
               className="rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-strong)]"
             >
-              Browse Roofing Marketing Tools
+              Start with Backlink Authority
+            </Link>
+            <Link
+              href="/local-seo/roofing-local-seo-starter"
+              className="rounded-xl border border-[var(--border)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            >
+              Launch Local SEO Starter
             </Link>
             <Link
               href="/resources"
@@ -88,13 +97,10 @@ export default function HomePage() {
             >
               Explore SEO Playbooks
             </Link>
-            <Link
-              href="/free-tools"
-              className="rounded-xl border border-[var(--border)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
-            >
-              Use Free Calculators
-            </Link>
           </div>
+          <p className="text-xs font-medium uppercase tracking-[0.09em] text-[var(--muted)]">
+            Secure Stripe checkout. No consultation call required before purchase.
+          </p>
         </div>
       </section>
 
@@ -142,6 +148,9 @@ export default function HomePage() {
                 priceLabel={offer.priceLabel}
                 description={offer.description}
                 buttonLabel={offer.buttonLabel}
+                ctaSupport={offer.ctaSupport}
+                billingMode={offer.billingMode}
+                trustPoints={offer.trustPoints}
               />
               <Link
                 href={offer.href}

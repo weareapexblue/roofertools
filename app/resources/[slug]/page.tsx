@@ -231,6 +231,9 @@ export default async function ResourceDetailPage({
                   priceLabel={primaryOffer.priceLabel}
                   description={primaryOffer.description}
                   buttonLabel={product.ctaLabel}
+                  ctaSupport={product.ctaSupport}
+                  billingMode={primaryOffer.mode}
+                  trustPoints={product.ctaTrustPoints}
                 />
                 <Link
                   href={`/${product.silo}/${product.slug}`}

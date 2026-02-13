@@ -28,6 +28,8 @@ export type Product = {
   signalWindows: Array<{ window: string; expectation: string }>;
   disclaimers: string[];
   ctaLabel: string;
+  ctaSupport: string;
+  ctaTrustPoints: string[];
   offers: ProductOffer[];
   faq: Array<{ question: string; answer: string }>;
 };
@@ -103,7 +105,14 @@ export const products: Product[] = [
       "No performance guarantees.",
       "Placements are subject to editorial and publisher acceptance.",
     ],
-    ctaLabel: "Purchase Backlink Pack",
+    ctaLabel: "Secure Backlink Checkout",
+    ctaSupport:
+      "Get authority placement production started immediately after secure Stripe checkout.",
+    ctaTrustPoints: [
+      "Secure Stripe payment processing",
+      "No consultation call required",
+      "Direct order confirmation workflow",
+    ],
     offers: [
       {
         id: "single-premium-link",
@@ -219,7 +228,14 @@ export const products: Product[] = [
       "Third-party distribution endpoints are subject to publisher policies.",
       "No ranking guarantees or traffic guarantees.",
     ],
-    ctaLabel: "Launch Press Distribution",
+    ctaLabel: "Secure Press Release Checkout",
+    ctaSupport:
+      "Launch distribution workflow immediately with direct checkout and intake handoff.",
+    ctaTrustPoints: [
+      "Secure Stripe payment processing",
+      "Campaign intake starts after purchase",
+      "One-time purchase with defined scope",
+    ],
     offers: [
       {
         id: "press-release-standard",
@@ -331,7 +347,14 @@ export const products: Product[] = [
       "No ranking guarantees or traffic guarantees.",
       "Monthly subscription billing.",
     ],
-    ctaLabel: "Launch Local Starter SEO",
+    ctaLabel: "Launch Local SEO Monthly",
+    ctaSupport:
+      "Start monthly local SEO execution for one roofing location with recurring delivery cadence.",
+    ctaTrustPoints: [
+      "Secure recurring billing via Stripe",
+      "Single-location scope clarity",
+      "Monthly reporting and activity tracking",
+    ],
     offers: [
       {
         id: "local-seo-starter-monthly",
@@ -432,7 +455,14 @@ export const products: Product[] = [
       "No ranking guarantees.",
       "Timeline depends on content approvals and launch dependencies.",
     ],
-    ctaLabel: "Purchase 7 Page Lead Engine",
+    ctaLabel: "Start 7 Page Build",
+    ctaSupport:
+      "Begin your 7-page SEO microsite build with direct checkout and production onboarding.",
+    ctaTrustPoints: [
+      "Secure Stripe payment processing",
+      "One-time project with defined deliverables",
+      "Deployment-ready handoff included",
+    ],
     offers: [
       {
         id: "microsite-7-page",
@@ -534,7 +564,14 @@ export const products: Product[] = [
       "No ranking guarantees or traffic guarantees.",
       "Build timeline depends on data inputs and publishing stack readiness.",
     ],
-    ctaLabel: "Purchase 50 Page Cluster Site",
+    ctaLabel: "Start 50 Page Build",
+    ctaSupport:
+      "Lock in cluster-site production and launch your search real-estate asset build.",
+    ctaTrustPoints: [
+      "Secure Stripe payment processing",
+      "Structured 50-page deployment framework",
+      "One-time build with implementation handoff",
+    ],
     offers: [
       {
         id: "microsite-50-page",
