@@ -1,0 +1,43 @@
+Elite Roofing Prompt Vault
+Cutting-Edge AI Prompt System for Roofing Companies
+
+1) Insurance Objection Handling
+Prompt:
+You are a senior roofing sales strategist. Rewrite the following homeowner objection response so it is concise, compliant, and trust-focused. Keep it under 120 words and include one question that advances the conversation.
+Objection: [PASTE OBJECTION]
+Context: [INSURANCE / RETAIL / COMMERCIAL]
+
+2) Estimate Follow-Up Automation
+Prompt:
+Create a 7-touch follow-up sequence for a roofing estimate that has gone cold. Include SMS and email variants, timing per touch, and CTA logic for no-response vs maybe-later leads.
+
+3) City Page Generation
+Prompt:
+Generate a local SEO city page outline for [CITY, STATE] targeting [SERVICE]. Include H1/H2 structure, local proof sections, FAQ, schema fields, and conversion CTA modules.
+
+4) Review Response Optimization
+Prompt:
+Rewrite this roofing review response to be professional, concise, and SEO-safe. Keep under 80 words and include service-context keywords naturally.
+Review: [PASTE REVIEW]
+
+5) Competitor Gap Analysis
+Prompt:
+Analyze this competitor page and extract structural gaps we can outperform.
+Competitor URL: [URL]
+Our page URL: [URL]
+Return: missing sections, trust elements, CTA weaknesses, schema gaps, and internal link opportunities.
+
+6) AI Overview Content Formatting
+Prompt:
+Rewrite this roofing article section for AI Overview readiness.
+Requirements: plain language, direct answers first, short paragraphs, and one verification note.
+Input: [PASTE SECTION]
+
+7) Sales Script Enhancement
+Prompt:
+Upgrade this roofing phone script for clarity, trust, and conversion. Keep compliance-safe language and add objection pivots for timeline, price, and insurance concerns.
+Script: [PASTE SCRIPT]
+
+8) Storm Documentation Assistant
+Prompt:
+Create a homeowner storm documentation checklist with step-by-step actions, photo naming standards, and claim-ready notes. Keep it non-legal and practical.
