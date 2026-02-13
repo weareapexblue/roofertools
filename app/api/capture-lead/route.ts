@@ -5,6 +5,11 @@ export const runtime = "nodejs";
 type CaptureLeadPayload = {
   email?: string;
   source?: string;
+  fullName?: string;
+  company?: string;
+  markets?: string;
+  website?: string;
+  message?: string;
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -25,6 +30,11 @@ export async function POST(request: Request) {
   const leadRecord = {
     email: payload.email.toLowerCase(),
     source: payload.source || "unknown",
+    fullName: payload.fullName || "",
+    company: payload.company || "",
+    markets: payload.markets || "",
+    website: payload.website || "",
+    message: payload.message || "",
     capturedAt: new Date().toISOString(),
   };
 

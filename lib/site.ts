@@ -1,6 +1,6 @@
 export const SITE_NAME = "RooferMarketingTools.com";
 export const SITE_TAGLINE = "Digital Growth Infrastructure for Roofing Companies";
-export const SITE_SUBHEAD = "Authority. Distribution. Search Real Estate. Support USA Based Tech Companies.";
+export const SITE_SUBHEAD = "Authority. Distribution. Search Real Estate. USA Based.";
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
@@ -14,6 +14,7 @@ export const NAV_LINKS = [
   { href: "/free-tools", label: "Free Tools" },
   { href: "/resources", label: "Resources" },
   { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export const FOOTER_LINKS = {

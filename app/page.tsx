@@ -163,6 +163,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-7 sm:p-8">
+        <div className="grid gap-5 md:grid-cols-[1.5fr_auto] md:items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+              Enterprise Request
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text)] sm:text-3xl">
+              Looking for Aggressive Multi-Location SEO?
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+              Contact us and go to the form to submit your market count, target cities, and growth objective.
+            </p>
+          </div>
+          <Link
+            href="/contact#contact-form"
+            className="inline-flex h-fit rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-strong)]"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </section>
+
       <section className="grid gap-4 lg:grid-cols-3">
         <InfoPanel
           title="Free Tools"
