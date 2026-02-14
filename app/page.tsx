@@ -10,9 +10,9 @@ import { buildMetadata } from "@/lib/seo";
 import { SITE_SUBHEAD, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: "Digital Growth Infrastructure for Roofing Companies",
+  title: "Roofer Marketing Tools for Roofing Companies",
   description:
-    "RooferMarketingTools.com is a productized storefront for roofing backlinks, press release distribution, local SEO, and microsite assets.",
+    "Roofer marketing tools to grow roofing companies: premium backlinks, SEO press releases, local SEO starter, and SEO microsites. Direct purchase. USA based.",
   path: "/",
   keywords: [
     "roofer marketing",
@@ -20,6 +20,10 @@ export const metadata = buildMetadata({
     "marketing for roofers",
     "SEO for roofing companies",
   ],
+  openGraphTitle: "Roofer Marketing Tools for Roofing Companies",
+  openGraphDescription:
+    "Premium roofing backlinks, press distribution, local SEO, and microsite builds. Direct checkout.",
+  openGraphImage: "/og/roofer-marketing-tools.webp",
 });
 
 export default function HomePage() {

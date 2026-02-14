@@ -7,13 +7,26 @@ export function buildMetadata({
   description,
   path,
   keywords,
+  openGraphTitle,
+  openGraphDescription,
+  openGraphImage,
 }: {
   title: string;
   description: string;
   path: string;
   keywords?: string[];
+  openGraphTitle?: string;
+  openGraphDescription?: string;
+  openGraphImage?: string;
 }): Metadata {
   const url = `${SITE_URL}${path}`;
+  const ogTitle = openGraphTitle || title;
+  const ogDescription = openGraphDescription || description;
+  const ogImageUrl = openGraphImage
+    ? openGraphImage.startsWith("http")
+      ? openGraphImage
+      : `${SITE_URL}${openGraphImage}`
+    : undefined;
 
   return {
     title,
@@ -23,17 +36,27 @@ export function buildMetadata({
       canonical: url,
     },
     openGraph: {
-      title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       url,
       siteName: SITE_NAME,
       locale: "en_US",
       type: "website",
+      images: ogImageUrl
+        ? [
+            {
+              url: ogImageUrl,
+              width: 1200,
+              height: 630,
+            },
+          ]
+        : undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
+      images: ogImageUrl ? [ogImageUrl] : undefined,
     },
   };
 }
