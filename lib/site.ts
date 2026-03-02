@@ -7,6 +7,7 @@ export const SITE_URL =
   "https://roofermarketingtools.com";
 
 export const CONTACT_EMAIL = "team@roofermarketingtools.com";
+export const OWNER_EMAIL = "matt@roofermarketingtools.com";
 
 export const NAV_LINKS = [
   { href: "/backlinks", label: "Backlinks" },

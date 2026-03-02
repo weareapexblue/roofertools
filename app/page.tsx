@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { JsonLd } from "@/components/json-ld";
+import { OwnerOfferCta } from "@/components/owner-offer-cta";
 import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
 import { blogPosts } from "@/lib/blog";
@@ -105,6 +106,7 @@ export default function HomePage() {
           <p className="text-xs font-medium uppercase tracking-[0.09em] text-[var(--muted)]">
             Secure Stripe checkout. No consultation call required before purchase.
           </p>
+          <OwnerOfferCta variant="hero" className="motion-reveal" />
         </div>
       </section>
 
@@ -188,6 +190,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <OwnerOfferCta variant="inline" className="motion-reveal" />
 
       <section className="stagger-grid grid gap-4 lg:grid-cols-3">
         <InfoPanel

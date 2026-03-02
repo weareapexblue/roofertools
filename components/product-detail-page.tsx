@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { FaqSection } from "@/components/faq-section";
+import { OwnerOfferCta } from "@/components/owner-offer-cta";
 import { ProductCard } from "@/components/product-card";
 import { PurchaseButton } from "@/components/purchase-button";
 import { SectionHeading } from "@/components/section-heading";
@@ -207,6 +208,8 @@ export function ProductDetailPage({ product, siblingLinks }: ProductDetailPagePr
           ))}
         </ul>
       </section>
+
+      <OwnerOfferCta variant="inline" />
 
       <FaqSection items={product.faq} />
 

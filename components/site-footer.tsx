@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { OwnerOfferCta } from "@/components/owner-offer-cta";
 import { CONTACT_EMAIL, FOOTER_LINKS } from "@/lib/site";
 
 export function SiteFooter() {
@@ -74,6 +75,9 @@ export function SiteFooter() {
             <Link href="/legal/privacy">Privacy Policy</Link>
           </div>
         </div>
+      </div>
+      <div className="mx-auto w-full max-w-7xl px-6 pb-12">
+        <OwnerOfferCta variant="footer" />
       </div>
     </footer>
   );
