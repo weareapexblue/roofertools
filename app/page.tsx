@@ -1,25 +1,28 @@
 import Link from "next/link";
 
+import { FaqSection } from "@/components/faq-section";
 import { JsonLd } from "@/components/json-ld";
 import { OwnerOfferCta } from "@/components/owner-offer-cta";
 import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
-import { blogPosts } from "@/lib/blog";
+import { formatBlogDate, getBlogPostReadTime, getLatestBlogPosts } from "@/lib/blog";
 import { products } from "@/lib/products";
 import { resources } from "@/lib/resources";
-import { buildMetadata } from "@/lib/seo";
+import { buildFaqSchema, buildMetadata } from "@/lib/seo";
 import { SITE_SUBHEAD, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Roofer Marketing Tools for Roofing Companies",
   description:
-    "Roofer marketing tools to grow roofing companies: premium backlinks, SEO press releases, local SEO starter, and SEO microsites. Direct purchase. USA based.",
+    "Roofer marketing tools, fresh roofing growth content, premium backlinks, SEO press releases, local SEO starter, and SEO microsites for roofing companies. Direct purchase. USA based.",
   path: "/",
   keywords: [
     "roofer marketing",
     "roofing marketing tools",
     "marketing for roofers",
     "SEO for roofing companies",
+    "roofing lead generation",
+    "storm roofing marketing",
   ],
   openGraphTitle: "Roofer Marketing Tools for Roofing Companies",
   openGraphDescription:
@@ -29,7 +32,34 @@ export const metadata = buildMetadata({
 
 export default function HomePage() {
   const featuredResourceList = resources.slice(0, 8);
-  const featuredBlog = blogPosts.slice(0, 4);
+  const featuredBlog = getLatestBlogPosts(4);
+  const homeFaq = [
+    {
+      question: "What marketing channels should a roofing company build first?",
+      answer:
+        "Most roofing companies should start with strong service pages, local SEO, review generation, and fast lead response. Once those foundations are stable, backlinks, press distribution, and microsite expansion usually create much better returns.",
+    },
+    {
+      question: "Is local SEO or backlinks more important for roofers?",
+      answer:
+        "For a single-location roofer, local SEO usually comes first because it improves map-pack visibility and service-area relevance. Backlinks become more important once the core pages are live and authority gaps are holding rankings back.",
+    },
+    {
+      question: "How often should roofers publish fresh content?",
+      answer:
+        "One strong roofing article or resource page each month can outperform high-volume generic publishing, especially when it answers real buyer or operator questions and links cleanly into service pages and offers.",
+    },
+    {
+      question: "What type of roofing content attracts better leads?",
+      answer:
+        "Roofing content performs best when it addresses real buying friction: storm damage process, insurance timelines, financing, warranty questions, service-area proof, estimate follow-up, and repair versus replacement decisions.",
+    },
+    {
+      question: "When should a roofer invest in an SEO microsite?",
+      answer:
+        "A microsite usually makes sense when the business needs new search real estate for expansion, stronger city-page coverage, or segmented funnels that the main website cannot support cleanly.",
+    },
+  ];
 
   const quickOffers = products.flatMap((product) =>
     product.offers.map((offer) => ({
@@ -58,6 +88,7 @@ export default function HomePage() {
   return (
     <div className="mx-auto w-full max-w-7xl space-y-20 px-6 py-16 sm:py-20">
       <JsonLd data={organizationSchema} />
+      <JsonLd data={buildFaqSchema(homeFaq)} />
 
       <section className="motion-reveal relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-12">
         <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[color:color-mix(in_srgb,var(--accent)_20%,transparent)] blur-3xl" />
@@ -274,8 +305,8 @@ export default function HomePage() {
       <section className="space-y-6">
         <SectionHeading
           eyebrow="Blog"
-          title="Latest Roofing Marketing Articles"
-          description="Practical analysis for SEO performance, authority development, and conversion operations."
+          title="Fresh Roofing Growth Briefs"
+          description="New operator-focused content on lead response, storm trust, financing, follow-up, and roofing SEO execution."
         />
         <div className="stagger-grid grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {featuredBlog.map((post) => (
@@ -284,15 +315,23 @@ export default function HomePage() {
               href={`/blog/${post.slug}`}
               className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+                {formatBlogDate(post.publishedAt)} · {getBlogPostReadTime(post)} min read
+              </p>
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted)]">
                 {post.tags.join(" · ")}
               </p>
               <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">{post.title}</h3>
               <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{post.description}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--muted)]">
+                Read Brief
+              </p>
             </Link>
           ))}
         </div>
       </section>
+
+      <FaqSection items={homeFaq} />
 
     </div>
   );

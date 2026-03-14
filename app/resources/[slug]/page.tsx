@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { FaqSection } from "@/components/faq-section";
 import { JsonLd } from "@/components/json-ld";
 import { ProductCard } from "@/components/product-card";
+import { formatBlogDate, getBlogPostReadTime, getLatestBlogPosts } from "@/lib/blog";
 import { getProductById } from "@/lib/products";
 import { getResourceBySlug, getResourceSections, resources } from "@/lib/resources";
 import { buildArticleSchema, buildFaqSchema, buildMetadata } from "@/lib/seo";
@@ -58,6 +59,7 @@ export default async function ResourceDetailPage({
   const relatedProducts = resource.relatedProductIds
     .map((id) => getProductById(id))
     .filter((item) => item !== undefined);
+  const latestBlogPosts = getLatestBlogPosts(3);
 
   return (
     <div className="mx-auto w-full max-w-7xl space-y-10 px-6 py-16 sm:py-20">
@@ -67,6 +69,7 @@ export default async function ResourceDetailPage({
           description: resource.description,
           path: `/resources/${resource.slug}`,
           publishedAt: "2026-02-13",
+          modifiedAt: "2026-03-13",
           keywords: [resource.focusKeyword, "roofing marketing"],
         })}
       />
@@ -244,6 +247,32 @@ export default async function ResourceDetailPage({
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="space-y-5 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+        <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+          Fresh Roofing Growth Briefs
+        </h2>
+        <p className="text-sm leading-7 text-[var(--muted)]">
+          New articles for roofing owners who want current ideas on response speed, storm trust, financing, and follow-up.
+        </p>
+        <div className="grid gap-4 md:grid-cols-3">
+          {latestBlogPosts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">
+                {formatBlogDate(post.publishedAt)} · {getBlogPostReadTime(post)} min read
+              </p>
+              <h3 className="mt-2 text-lg font-semibold tracking-tight text-[var(--text)]">
+                {post.title}
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{post.description}</p>
+            </Link>
+          ))}
         </div>
       </section>
 

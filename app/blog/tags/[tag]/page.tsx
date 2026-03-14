@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import {
+  formatBlogDate,
   getAllBlogTags,
+  getBlogPostReadTime,
   getBlogPostsByTagSlug,
   getDisplayTagBySlug,
   slugifyTag,
@@ -61,6 +63,9 @@ export default async function BlogTagPage({
             key={post.slug}
             className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"
           >
+            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">
+              {formatBlogDate(post.publishedAt)} · {getBlogPostReadTime(post)} min read
+            </p>
             <h2 className="text-xl font-semibold tracking-tight text-[var(--text)]">{post.title}</h2>
             <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{post.description}</p>
             <Link

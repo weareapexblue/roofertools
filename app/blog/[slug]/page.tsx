@@ -3,7 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/json-ld";
-import { blogPosts, getBlogPostBySlug } from "@/lib/blog";
+import {
+  blogPosts,
+  formatBlogDate,
+  getBlogPostBySlug,
+  getBlogPostReadTime,
+  getRelatedBlogPosts,
+} from "@/lib/blog";
 import { buildArticleSchema, buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -50,6 +56,7 @@ export default async function BlogDetailPage({
     heading: section.heading,
     id: section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
   }));
+  const relatedPosts = getRelatedBlogPosts(post, 3);
 
   return (
     <article className="mx-auto w-full max-w-7xl space-y-8 px-6 py-16 sm:py-20">
@@ -68,6 +75,9 @@ export default async function BlogDetailPage({
         <div className="relative">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
             {post.tags.join(" · ")}
+          </p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--muted)]">
+            {formatBlogDate(post.publishedAt)} · {getBlogPostReadTime(post)} min read
           </p>
           <h1 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-5xl">
             {post.title}
@@ -147,6 +157,32 @@ export default async function BlogDetailPage({
           >
             SEO Microsites
           </Link>
+        </div>
+      </section>
+
+      <section className="space-y-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+        <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+          Related Roofing Articles
+        </h2>
+        <p className="text-sm leading-7 text-[var(--muted)]">
+          Keep moving through the cluster with related briefs built for roofing owners and growth teams.
+        </p>
+        <div className="grid gap-4 md:grid-cols-3">
+          {relatedPosts.map((relatedPost) => (
+            <Link
+              key={relatedPost.slug}
+              href={`/blog/${relatedPost.slug}`}
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">
+                {formatBlogDate(relatedPost.publishedAt)} · {getBlogPostReadTime(relatedPost)} min read
+              </p>
+              <h3 className="mt-2 text-lg font-semibold tracking-tight text-[var(--text)]">
+                {relatedPost.title}
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{relatedPost.description}</p>
+            </Link>
+          ))}
         </div>
       </section>
     </article>

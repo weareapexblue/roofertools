@@ -369,6 +369,266 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "roofing-lead-response-time-fastest-team-wins",
+    title: "Roofing Lead Response Time: The Fastest Team Usually Wins",
+    description:
+      "Why roofing companies lose profitable jobs in the first few minutes after an inquiry and how to build a faster response system.",
+    publishedAt: "2026-03-13",
+    tags: ["Lead Response", "Sales Ops", "Roofing Marketing"],
+    sections: [
+      {
+        heading: "Speed Changes the Economics of Every Lead",
+        paragraphs: [
+          "Roofing owners often describe lead quality as if it were fixed at the moment a form is submitted, but response speed changes the value of that lead immediately. The contractor who replies first usually sets the tone, frames expectations, and earns the first inspection slot. In emergency and storm-influenced windows, that time advantage can decide the job before slower competitors even call back.",
+          "This is why lead response should be treated as a revenue lever, not an admin task. If a company spends to generate demand but cannot answer quickly, the marketing system looks weaker than it actually is. Fast response protects conversion rate, reduces wasted acquisition cost, and improves close-rate consistency across channels.",
+        ],
+      },
+      {
+        heading: "Build Separate Workflows for Emergency and Planned Projects",
+        paragraphs: [
+          "Not every roofing lead should enter the same intake lane. Leak emergencies, storm tarping requests, and active damage inquiries require an immediate speed-first workflow. Planned replacements, inspections, and commercial bids usually need a more consultative path with better qualification detail.",
+          "When both lead types are routed through the same script, one of them suffers. The better model is two-lane triage: urgent inquiries go to rapid dispatch logic, while planned projects move into a scheduling and qualification process that protects rep time without slowing response to real opportunities.",
+        ],
+      },
+      {
+        heading: "Your First Message Should Reduce Uncertainty",
+        paragraphs: [
+          "Fast follow-up only works when the first interaction actually helps the buyer. Roofing prospects want to know whether you service their area, how quickly someone can respond, and what they should do next. A vague voicemail or generic auto-reply creates motion without increasing trust.",
+          "The strongest first-touch scripts confirm receipt, state a realistic next step, and lower confusion. For example, a good message clarifies service area, expected callback window, and whether photos, insurance details, or property access notes would help speed up scheduling.",
+        ],
+      },
+      {
+        heading: "Measure Contact Rate Before You Diagnose Close Rate",
+        paragraphs: [
+          "Many teams jump directly to sales coaching when close rates soften, but the earlier leak is often contact rate. If leads are missed, called too late, or routed inconsistently, the business never reaches a true sales conversation often enough to evaluate script quality fairly.",
+          "The first dashboard should track contact within 5 minutes, contact within 15 minutes, lead-to-inspection rate, and booking by source. Once those numbers are stable, leadership can assess whether close-rate problems belong to sales, pricing, offer design, or market fit.",
+        ],
+      },
+      {
+        heading: "Marketing and Intake Need One Feedback Loop",
+        paragraphs: [
+          "Roofing marketing usually gets reviewed in one meeting while phone handling and CSR workflow are discussed somewhere else. That separation hides the real causes of underperformance. Landing-page copy, ad messaging, and form design should all be informed by what intake teams are hearing on real calls.",
+          "If callers repeatedly ask about financing, insurance timing, or whether repairs are offered, those objections belong in page copy and automation. The strongest operators treat lead response, messaging, and page architecture as one system instead of three departments.",
+        ],
+      },
+      {
+        heading: "Response-Time Discipline Creates Compounding ROI",
+        paragraphs: [
+          "Improving response time is one of the few growth changes that increases output without requiring more traffic. A tighter first-touch workflow lets the same marketing budget produce more inspections, more estimates, and more winnable opportunities.",
+          "For roofers, this is especially powerful because seasonality compresses decision windows. When storm demand spikes or weather breaks open replacement demand, the contractors with response discipline usually outperform competitors with stronger branding but slower operations.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "storm-marketing-without-looking-like-a-storm-chaser",
+    title: "How Roofers Can Market Storm Work Without Looking Like a Storm Chaser",
+    description:
+      "A storm-marketing framework that creates urgency and trust without damaging brand credibility.",
+    publishedAt: "2026-03-13",
+    tags: ["Storm Marketing", "Brand Trust", "SEO"],
+    sections: [
+      {
+        heading: "Storm Demand Requires Trust Before Aggression",
+        paragraphs: [
+          "After severe weather, homeowners move quickly but they also become highly skeptical. Their inbox, social feeds, and neighborhoods fill with aggressive offers almost immediately. Roofing companies that market storm work effectively do not win by sounding louder than everyone else. They win by becoming the clearest and most credible option during a chaotic buying moment.",
+          "That means storm campaigns should lead with inspection clarity, documentation help, service-area proof, and realistic timelines. The goal is to lower confusion, not amplify panic. Brands that do this well often earn both better conversion rates and stronger long-term reputation in the same market.",
+        ],
+      },
+      {
+        heading: "Use Local Proof Instead of Generic Storm Hype",
+        paragraphs: [
+          "Most weak storm pages use the same formula: generic urgency, vague damage claims, and no local specificity. That creates low trust quickly. Strong storm marketing uses local weather context, affected service areas, project turnaround expectations, and visible proof that the contractor actually operates in the market being targeted.",
+          "Photos, recent response activity, documentation checklists, and real process detail make a bigger difference than dramatic language. Buyers want to know who will show up, what happens during the inspection, and whether the contractor understands claims and supplements in their market.",
+        ],
+      },
+      {
+        heading: "Build Campaigns Around Helpful Next Steps",
+        paragraphs: [
+          "Storm leads convert better when the next step is obvious. Instead of asking a buyer to make a high-trust decision instantly, guide them through a clear sequence: inspection request, damage documentation, insurance process overview, and scheduling expectations. This creates structure at a moment when most buyers are overwhelmed.",
+          "The best storm landing pages are practical. They answer what to do first, what not to sign too early, what information to gather, and how the roofing company communicates during the claim process. Helpful structure is what separates a trusted local operator from a transient pitch.",
+        ],
+      },
+      {
+        heading: "Align SEO, Press, and Follow-Up Messaging",
+        paragraphs: [
+          "Storm campaigns work better when every layer says the same thing. Search pages, press mentions, email follow-up, and call scripts should reinforce the same positioning: local coverage, inspection clarity, and clean process management. Mixed messaging erodes confidence fast.",
+          "This is where distribution and SEO can support each other. Search pages capture demand, while press distribution and entity consistency help validate market presence. Together, they give the brand a more credible footprint during high-noise demand windows.",
+        ],
+      },
+      {
+        heading: "Protect the Brand After the Weather Cycle Ends",
+        paragraphs: [
+          "Short-term storm demand can create long-term brand problems when companies overpromise, over-message, or use questionable claims. Roofing brands should build storm campaigns they would still be comfortable showing to commercial buyers, referral partners, and future residential prospects six months later.",
+          "That standard usually improves copy quality immediately. When the campaign is built to survive scrutiny, exaggerated offers disappear and clearer process language takes over. This protects future trust while still allowing fast response during storm surges.",
+        ],
+      },
+      {
+        heading: "The Best Storm Marketing Looks Like Operations",
+        paragraphs: [
+          "At the highest level, storm marketing is not about creative tricks. It is operational visibility. The company that communicates faster, documents cleaner, and sets better expectations usually earns the highest-quality storm opportunities.",
+          "For roofers, this means the marketing stack should mirror the actual field process. If the company is organized, the campaign should feel organized. That alignment is what makes storm marketing persuasive without looking predatory.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "roofing-financing-content-that-increases-close-rate",
+    title: "Roofing Financing Content That Increases Close Rate",
+    description:
+      "How roofers can use financing content to reduce hesitation, improve lead quality, and help more estimates turn into booked jobs.",
+    publishedAt: "2026-03-13",
+    tags: ["Financing", "Conversion", "Website"],
+    sections: [
+      {
+        heading: "Financing Is a Sales Enablement Asset, Not a Footer Badge",
+        paragraphs: [
+          "Many roofing websites mention financing once and assume the buyer will do the rest. In practice, financing only improves performance when it is explained clearly enough to reduce hesitation before the sales visit and during the estimate window. A small badge in the footer does not do that work.",
+          "Roofing buyers usually interpret financing as a signal about affordability, flexibility, and confidence. When financing language is positioned well, more homeowners request inspections earlier, fewer estimates stall after price presentation, and the company attracts buyers who are serious but cost-sensitive.",
+        ],
+      },
+      {
+        heading: "Place Financing Explanations Where Decision Anxiety Happens",
+        paragraphs: [
+          "The most effective financing content appears near cost-related tension points: replacement service pages, estimate request forms, FAQ modules, and follow-up emails after inspections. That is where buyers wonder whether they can move forward, and that is where clarity creates leverage.",
+          "Good placement does not mean aggressive pushing. It means giving simple guidance exactly where uncertainty appears. Terms, approval expectations, and next-step instructions should be easy to understand without forcing the prospect into a hard-credit panic moment before trust is established.",
+        ],
+      },
+      {
+        heading: "Use Financing Content to Improve Lead Quality",
+        paragraphs: [
+          "Financing content can improve fit quality when it clarifies who financing is for and how the process works. This reduces situations where buyers assume impossible terms or misunderstand what is available. Better expectation setting produces cleaner sales conversations and less estimate fallout.",
+          "For roofing companies, this is particularly useful on full replacement pages where pricing sensitivity is highest. Financing explanations help the buyer stay engaged long enough to evaluate value, warranty, materials, and scheduling instead of exiting at the first sign of sticker shock.",
+        ],
+      },
+      {
+        heading: "Support the Sales Team With Pre-Visit Education",
+        paragraphs: [
+          "A well-built financing page shortens the amount of basic explanation needed during the appointment. That gives reps more room to focus on diagnosis, scope, and credibility instead of trying to teach the financing process from scratch under time pressure.",
+          "The same content should feed follow-up automation. If an estimate goes quiet, financing FAQs, payment-range framing, and approval-step guidance can help revive the opportunity without sounding desperate or overly promotional.",
+        ],
+      },
+      {
+        heading: "Keep the Message Practical and Verifiable",
+        paragraphs: [
+          "Roofing financing content should sound precise, not gimmicky. Avoid inflated savings claims or vague language that creates downstream disappointment. Buyers trust financing explanations more when the content focuses on process, timing, qualification expectations, and how financing fits into project scheduling.",
+          "Practical language is also easier for the team to repeat consistently across calls, forms, and in-home presentations. That consistency matters because mixed messages around money weaken trust faster than almost any other conversion element.",
+        ],
+      },
+      {
+        heading: "Financing Visibility Can Raise Close Rate Without More Traffic",
+        paragraphs: [
+          "One reason financing content matters so much is that it improves monetization of traffic you already have. If more qualified prospects stay engaged through the estimate phase, the same SEO and paid traffic can generate better booked-job output.",
+          "For roofers trying to grow without simply buying more leads, financing clarity is often one of the highest-leverage improvements on the site. It supports conversion, sales confidence, and better follow-up all at once.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "recover-dead-roofing-estimates-with-better-follow-up",
+    title: "How to Recover Dead Roofing Estimates With Better Follow-Up",
+    description:
+      "A practical follow-up framework for roofing companies that want to revive stalled estimates without sounding desperate.",
+    publishedAt: "2026-03-13",
+    tags: ["Estimate Follow-Up", "Sales Ops", "Conversion"],
+    sections: [
+      {
+        heading: "Most Estimates Go Cold Because the System Goes Quiet",
+        paragraphs: [
+          "Roofing companies often assume stalled estimates were simply price objections or bad leads. In reality, many deals die because the follow-up system loses structure after the appointment. Reps get busy, messages vary by person, and no one owns the sequence strongly enough to keep momentum alive.",
+          "When the process goes quiet, the buyer fills in the blanks alone. Competitors re-enter the conversation, urgency drops, and even a good proposal starts to feel easy to postpone. Strong follow-up is not pressure. It is continuity.",
+        ],
+      },
+      {
+        heading: "Segment Follow-Up by Buyer Situation",
+        paragraphs: [
+          "The best follow-up sequences are not generic. An insurance claim estimate needs different messaging than a retail replacement, repair proposal, or commercial bid. The buyer's decision context changes what proof, timing, and next-step guidance actually matter.",
+          "Roofing operators should segment follow-up by project type, urgency, and estimate status. That lets the team send relevant reminders, documentation, and FAQs instead of recycling the same check-in message until the lead disappears.",
+        ],
+      },
+      {
+        heading: "Use Email and SMS for Different Jobs",
+        paragraphs: [
+          "Email is ideal for scope summaries, financing details, documentation, and photos. SMS is better for fast nudges, appointment reminders, and short next-step prompts. When both channels are used intentionally, follow-up feels more helpful and less repetitive.",
+          "The mistake is sending the same message everywhere. Channel-specific communication improves readability and keeps the prospect moving without creating fatigue. Roofing buyers should always know what the next action is, whether that means approving scope, booking production, or asking one final question.",
+        ],
+      },
+      {
+        heading: "Reinforce Trust After the Sales Visit",
+        paragraphs: [
+          "After an estimate, buyers tend to revisit credibility questions: Who will actually do the work? How smooth is communication? What happens if hidden issues appear? Follow-up should answer those concerns directly with process clarity, reviews, project examples, and realistic scheduling guidance.",
+          "This is where website content and sales follow-up should connect. If the site already contains financing guidance, project process pages, and service proof, reps can send prospects back into a trust-building asset instead of improvising reassurance from scratch.",
+        ],
+      },
+      {
+        heading: "Track the Middle of the Funnel, Not Just the Final Close",
+        paragraphs: [
+          "A healthy estimate pipeline is measured in stages: proposal delivered, first follow-up sent, response received, objection identified, decision date set, and close outcome. Without that visibility, leadership cannot tell whether deals are dying from pricing, indecision, timing, or weak follow-up discipline.",
+          "Tracking those milestones turns estimate recovery into a real process. Teams can see which messages work, which segments stall longest, and where automation can save rep time without weakening the personal touch.",
+        ],
+      },
+      {
+        heading: "A Better Follow-Up System Raises ROI Across Every Channel",
+        paragraphs: [
+          "Recovering dead estimates is one of the clearest ways to improve marketing ROI without adding traffic. If the company converts more of the leads it already paid to acquire, every SEO page, ad, referral, and storm campaign becomes more profitable.",
+          "For roofers, this is a strong reminder that growth does not come only from more leads. It also comes from better stewardship of the opportunities already in the pipeline.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "roofing-marketing-plan-for-owner-operators",
+    title: "A Roofing Marketing Plan for Owner-Operators",
+    description:
+      "A straightforward quarterly marketing plan for roofing owners who need growth without turning the business into a full-time marketing experiment.",
+    publishedAt: "2026-03-13",
+    tags: ["Roofing Marketing", "Planning", "ROI"],
+    sections: [
+      {
+        heading: "Start With Capacity, Not Channel Hype",
+        paragraphs: [
+          "Owner-operators usually feel pressure to do everything at once: SEO, ads, reviews, social, postcards, automations, and content. The better plan starts with capacity. How many quality opportunities can the team actually answer, inspect, estimate, and close well over the next quarter?",
+          "That capacity number should shape the plan. If the business can only handle a modest increase cleanly, the goal is not maximum lead volume. The goal is stable lead quality, better close-rate support, and a marketing stack that can scale without operational chaos.",
+        ],
+      },
+      {
+        heading: "Quarter One Should Build the Core Search Footprint",
+        paragraphs: [
+          "For most owner-led roofing companies, the first quarter should focus on fundamentals: service pages, local SEO cleanup, trust proof, review flow, and response-time discipline. These are the assets that make every future marketing dollar work harder.",
+          "Once the core footprint is stable, authority layers like backlinks and press distribution become far more productive. Buying authority before the site and intake process are ready usually creates weaker returns than owners expect.",
+        ],
+      },
+      {
+        heading: "Use Content to Solve Real Sales Friction",
+        paragraphs: [
+          "Content works best when it answers the same questions that slow down estimates and inspections. Roofing buyers want clarity on insurance, repair versus replacement, financing, material choices, warranty expectations, and timing. Those topics should shape the content calendar more than generic publishing goals.",
+          "This is why a practical marketing plan includes both ranking targets and sales-friction targets. If a new page reduces confusion and helps a rep close faster, it has commercial value even before it ranks for a major term.",
+        ],
+      },
+      {
+        heading: "Set a Monthly Review Rhythm You Can Actually Keep",
+        paragraphs: [
+          "Owner-operators do not need a giant dashboard. They need a review rhythm that survives the real pace of the business. One monthly review covering qualified leads, inspection rate, close rate, booked revenue by source, and the next three page priorities is usually enough to steer growth intelligently.",
+          "The key is consistency. A simpler scorecard reviewed every month is more valuable than a complicated analytics setup nobody trusts or uses.",
+        ],
+      },
+      {
+        heading: "Protect Margin While You Scale",
+        paragraphs: [
+          "A good roofing marketing plan protects margin, not just volume. If new leads are harder to close, farther away, or less aligned with the crew mix, growth can create more stress than profit. Every quarterly plan should account for travel radius, service mix, and sales capacity.",
+          "This is one reason owner-operators benefit from productized marketing assets. Clear scope makes it easier to add infrastructure in stages without accidentally committing to a bloated marketing program that the business cannot support.",
+        ],
+      },
+      {
+        heading: "The Best Plan Is the One the Team Can Execute Repeatedly",
+        paragraphs: [
+          "In roofing, the winning plan is rarely the most complicated one. It is the one the owner, office staff, and sales team can repeat without breaking. That usually means a focused content roadmap, a few strong authority assets, disciplined follow-up, and clean monthly inspection of the numbers that matter.",
+          "Consistency is what turns a marketing plan into real growth infrastructure. Once that base is working, expansion becomes much easier and much less risky.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string) {
@@ -377,7 +637,9 @@ export function getBlogPostBySlug(slug: string) {
 
 export function getBlogPostsByTag(tag: string) {
   const normalized = tag.toLowerCase();
-  return blogPosts.filter((post) => post.tags.some((entry) => entry.toLowerCase() === normalized));
+  return getSortedBlogPosts().filter((post) =>
+    post.tags.some((entry) => entry.toLowerCase() === normalized)
+  );
 }
 
 export function getAllBlogTags() {
@@ -392,9 +654,63 @@ export function slugifyTag(tag: string) {
 }
 
 export function getBlogPostsByTagSlug(tagSlug: string) {
-  return blogPosts.filter((post) => post.tags.some((tag) => slugifyTag(tag) === tagSlug));
+  return getSortedBlogPosts().filter((post) =>
+    post.tags.some((tag) => slugifyTag(tag) === tagSlug)
+  );
 }
 
 export function getDisplayTagBySlug(tagSlug: string) {
   return getAllBlogTags().find((tag) => slugifyTag(tag) === tagSlug);
+}
+
+export function getSortedBlogPosts() {
+  return [...blogPosts].sort(
+    (left, right) =>
+      right.publishedAt.localeCompare(left.publishedAt) || left.title.localeCompare(right.title)
+  );
+}
+
+export function getLatestBlogPosts(limit = blogPosts.length) {
+  return getSortedBlogPosts().slice(0, limit);
+}
+
+export function formatBlogDate(publishedAt: string) {
+  const [year, month, day] = publishedAt.split("-").map(Number);
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(year, month - 1, day));
+}
+
+export function getBlogPostReadTime(post: BlogPost) {
+  const wordCount = [post.title, post.description, ...post.sections.flatMap((section) => section.paragraphs)]
+    .join(" ")
+    .trim()
+    .split(/\s+/).length;
+
+  return Math.max(3, Math.ceil(wordCount / 220));
+}
+
+export function getRelatedBlogPosts(post: BlogPost, limit = 3) {
+  const currentTags = new Set(post.tags.map((tag) => tag.toLowerCase()));
+
+  return getSortedBlogPosts()
+    .filter((candidate) => candidate.slug !== post.slug)
+    .map((candidate) => ({
+      candidate,
+      score: candidate.tags.reduce(
+        (total, tag) => total + (currentTags.has(tag.toLowerCase()) ? 1 : 0),
+        0
+      ),
+    }))
+    .sort(
+      (left, right) =>
+        right.score - left.score ||
+        right.candidate.publishedAt.localeCompare(left.candidate.publishedAt) ||
+        left.candidate.title.localeCompare(right.candidate.title)
+    )
+    .slice(0, limit)
+    .map(({ candidate }) => candidate);
 }

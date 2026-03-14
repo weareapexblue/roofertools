@@ -115,12 +115,14 @@ export function buildArticleSchema({
   description,
   path,
   publishedAt,
+  modifiedAt,
   keywords,
 }: {
   headline: string;
   description: string;
   path: string;
   publishedAt: string;
+  modifiedAt?: string;
   keywords?: string[];
 }) {
   return {
@@ -129,7 +131,7 @@ export function buildArticleSchema({
     headline,
     description,
     datePublished: publishedAt,
-    dateModified: publishedAt,
+    dateModified: modifiedAt || publishedAt,
     mainEntityOfPage: `${SITE_URL}${path}`,
     publisher: {
       "@type": "Organization",
@@ -137,5 +139,29 @@ export function buildArticleSchema({
       url: SITE_URL,
     },
     keywords,
+  };
+}
+
+export function buildItemListSchema({
+  name,
+  path,
+  items,
+}: {
+  name: string;
+  path: string;
+  items: Array<{ name: string; path: string; description?: string }>;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    url: `${SITE_URL}${path}`,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${SITE_URL}${item.path}`,
+      name: item.name,
+      description: item.description,
+    })),
   };
 }
