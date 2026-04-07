@@ -1,14 +1,20 @@
 import { FreeToolsSuite } from "@/components/free-tools-suite";
 import { JsonLd } from "@/components/json-ld";
 import { SectionHeading } from "@/components/section-heading";
-import { buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: "Free Roofing Marketing Tools",
+  title: "Free Roofing Marketing Tools and SEO Calculators",
   description:
-    "Interactive roofing SEO ROI calculator, storm revenue estimator, cost comparison tool, and gated Elite Roofing Prompt Vault.",
+    "Use free roofing marketing tools: an SEO ROI calculator, storm revenue estimator, cost comparison calculator, and Elite Roofing Prompt Vault.",
   path: "/free-tools",
-  keywords: ["roofing marketing tools", "roofing SEO ROI calculator", "storm revenue estimator"],
+  keywords: [
+    "free roofing marketing tools",
+    "roofing marketing tools",
+    "roofing SEO ROI calculator",
+    "storm revenue estimator",
+  ],
 });
 
 export default function FreeToolsPage() {
@@ -19,9 +25,16 @@ export default function FreeToolsPage() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Free Roofing Marketing Tools",
+          url: `${SITE_URL}/free-tools`,
           description:
             "Email-gated calculator suite and prompt vault for roofing marketing planning.",
         }}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Free Roofing Marketing Tools", path: "/free-tools" },
+        ])}
       />
 
       <section className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-10">

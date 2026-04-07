@@ -7,6 +7,7 @@ import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const defaultImage = `${SITE_URL}/og/roofer-marketing-tools.webp`;
 
   const staticRoutes = [
     "",
@@ -28,24 +29,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: route === "" ? 1 : 0.8,
+      images: [defaultImage],
     })),
     ...products.map((product) => ({
       url: `${SITE_URL}/${product.silo}/${product.slug}`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+      images: [defaultImage],
     })),
     ...resources.map((resource) => ({
       url: `${SITE_URL}/resources/${resource.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+      images: [defaultImage],
     })),
     ...blogPosts.map((post) => ({
       url: `${SITE_URL}/blog/${post.slug}`,
       lastModified: new Date(`${post.publishedAt}T00:00:00`),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+      images: [defaultImage],
     })),
     ...getAllBlogTags().map((tag) => ({
       url: `${SITE_URL}/blog/tags/${slugifyTag(tag)}`,

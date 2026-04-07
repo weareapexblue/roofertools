@@ -4,12 +4,12 @@ import { JsonLd } from "@/components/json-ld";
 import { SectionHeading } from "@/components/section-heading";
 import { formatBlogDate, getBlogPostReadTime, getLatestBlogPosts } from "@/lib/blog";
 import { resources } from "@/lib/resources";
-import { buildItemListSchema, buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing Marketing Resources",
+  title: "Roofing Marketing Resources and SEO Playbooks",
   description:
-    "20 long-form roofing SEO and marketing guides with FAQ schema, internal linking, and conversion-focused CTAs.",
+    "Explore 20 roofing marketing resources and SEO playbooks covering lead generation, local SEO, backlinks, GBP optimization, content, and ROI.",
   path: "/resources",
   keywords: ["marketing for roofers", "roofing marketing tools", "SEO for roofing companies"],
 });
@@ -20,8 +20,10 @@ export default function ResourcesIndexPage() {
   return (
     <div className="mx-auto w-full max-w-7xl space-y-10 px-6 py-16 sm:py-20">
       <JsonLd
-        data={buildItemListSchema({
+        data={buildCollectionPageSchema({
           name: "Roofing Marketing Resources",
+          description:
+            "Long-form roofing SEO and marketing playbooks for roofers building search visibility, authority, and lead flow.",
           path: "/resources",
           items: resources.map((resource) => ({
             name: resource.title,
@@ -29,6 +31,12 @@ export default function ResourcesIndexPage() {
             description: resource.description,
           })),
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Marketing Resources", path: "/resources" },
+        ])}
       />
 
       <section className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-10">

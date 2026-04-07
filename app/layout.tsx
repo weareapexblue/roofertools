@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Sora, Space_Mono } from "next/font/google";
 
+import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { SITE_NAME } from "@/lib/site";
+import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/seo";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 import "./globals.css";
 
@@ -19,7 +21,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://roofermarketingtools.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: `${SITE_NAME} | Roofing Marketing Tools`,
     template: `%s | ${SITE_NAME}`,
@@ -36,6 +38,8 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <body className={`${sora.variable} ${spaceMono.variable}`}>
+        <JsonLd data={buildOrganizationSchema()} />
+        <JsonLd data={buildWebsiteSchema()} />
         <script
           dangerouslySetInnerHTML={{
             __html: `(() => {

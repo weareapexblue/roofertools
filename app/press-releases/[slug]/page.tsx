@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
 import { ProductDetailPage } from "@/components/product-detail-page";
 import { getProductBySiloAndSlug, products, getProductsBySilo } from "@/lib/products";
-import { buildFaqSchema, buildMetadata, buildProductSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildMetadata, buildProductSchema } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getProductsBySilo("press-releases").map((product) => ({ slug: product.slug }));
@@ -27,7 +27,7 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: product.name,
+    title: `${product.name} for Roofing SEO Authority`,
     description: product.summary,
     path: `/press-releases/${product.slug}`,
     keywords: ["roofing press release distribution", "roofing marketing tools", product.name],
@@ -60,6 +60,13 @@ export default async function PressReleaseProductPage({
           offers: product.offers,
           path: `/press-releases/${product.slug}`,
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Press Release Distribution", path: "/press-releases" },
+          { name: product.name, path: `/press-releases/${product.slug}` },
+        ])}
       />
       <JsonLd data={buildFaqSchema(product.faq)} />
       <ProductDetailPage product={product} siblingLinks={siblingLinks} />

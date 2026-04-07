@@ -1,14 +1,19 @@
 import { JsonLd } from "@/components/json-ld";
 import { SiloOverview } from "@/components/silo-overview";
 import { getProductsBySilo } from "@/lib/products";
-import { buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing SEO Microsites",
+  title: "Roofing SEO Microsites for Search Real Estate",
   description:
-    "7-page and 50-page roofing SEO microsite products designed as conversion and search real estate assets.",
+    "Buy 7-page and 50-page roofing SEO microsite products built for search real estate, city-service coverage, conversion paths, and lead capture.",
   path: "/microsites",
-  keywords: ["roofing SEO microsite", "roofing lead generation", "search real estate asset"],
+  keywords: [
+    "roofing SEO microsite",
+    "roofing lead generation",
+    "roofing microsite",
+    "search real estate asset",
+  ],
 });
 
 export default function MicrositesPage() {
@@ -17,13 +22,23 @@ export default function MicrositesPage() {
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
+        data={buildCollectionPageSchema({
           name: "Roofing SEO Microsites",
           description:
             "Conversion-focused and authority-scale microsite products for roofing demand capture.",
-        }}
+          path: "/microsites",
+          items: products.map((product) => ({
+            name: product.name,
+            path: `/${product.silo}/${product.slug}`,
+            description: product.summary,
+          })),
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing SEO Microsites", path: "/microsites" },
+        ])}
       />
       <SiloOverview
         eyebrow="Microsites"

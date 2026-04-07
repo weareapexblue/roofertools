@@ -1,14 +1,19 @@
 import { JsonLd } from "@/components/json-ld";
 import { SiloOverview } from "@/components/silo-overview";
 import { getProductsBySilo } from "@/lib/products";
-import { buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing Local SEO Starter",
+  title: "Roofing Local SEO Starter for Single-Location Roofers",
   description:
-    "Productized local SEO starter package for single GBP roofing locations with monthly reporting and execution.",
+    "Productized roofing local SEO starter package for single GBP locations, monthly execution, backlink support, reporting, and service-area visibility.",
   path: "/local-seo",
-  keywords: ["roofing SEO packages", "local SEO for roofers", "SEO for roofing companies"],
+  keywords: [
+    "roofing SEO packages",
+    "local SEO for roofers",
+    "roofing local SEO starter",
+    "SEO for roofing companies",
+  ],
 });
 
 export default function LocalSeoPage() {
@@ -17,13 +22,23 @@ export default function LocalSeoPage() {
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
+        data={buildCollectionPageSchema({
           name: "Roofing Local SEO Starter",
           description:
             "Local SEO infrastructure for single-location roofing companies with recurring monthly execution.",
-        }}
+          path: "/local-seo",
+          items: products.map((product) => ({
+            name: product.name,
+            path: `/${product.silo}/${product.slug}`,
+            description: product.summary,
+          })),
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Local SEO Starter", path: "/local-seo" },
+        ])}
       />
       <SiloOverview
         eyebrow="Local SEO"

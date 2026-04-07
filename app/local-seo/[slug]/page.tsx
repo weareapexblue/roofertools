@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
 import { ProductDetailPage } from "@/components/product-detail-page";
 import { getProductBySiloAndSlug, products, getProductsBySilo } from "@/lib/products";
-import { buildFaqSchema, buildMetadata, buildProductSchema } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildMetadata, buildProductSchema } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getProductsBySilo("local-seo").map((product) => ({ slug: product.slug }));
@@ -27,10 +27,10 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: product.name,
+    title: `${product.name} for Roofing Companies`,
     description: product.summary,
     path: `/local-seo/${product.slug}`,
-    keywords: ["roofing SEO packages", "local SEO for roofers", product.name],
+    keywords: ["roofing SEO packages", "local SEO for roofers", "roofing local SEO", product.name],
   });
 }
 
@@ -60,6 +60,13 @@ export default async function LocalSeoProductPage({
           offers: product.offers,
           path: `/local-seo/${product.slug}`,
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Local SEO Starter", path: "/local-seo" },
+          { name: product.name, path: `/local-seo/${product.slug}` },
+        ])}
       />
       <JsonLd data={buildFaqSchema(product.faq)} />
       <ProductDetailPage product={product} siblingLinks={siblingLinks} />

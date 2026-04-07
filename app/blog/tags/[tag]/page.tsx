@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { JsonLd } from "@/components/json-ld";
 import {
   formatBlogDate,
   getAllBlogTags,
@@ -10,7 +11,7 @@ import {
   getDisplayTagBySlug,
   slugifyTag,
 } from "@/lib/blog";
-import { buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getAllBlogTags().map((tag) => ({ tag: slugifyTag(tag) }));
@@ -25,11 +26,12 @@ export async function generateMetadata({
   const label = getDisplayTagBySlug(tag);
 
   return buildMetadata({
-    title: label ? `Blog Tag: ${label}` : "Blog Tag",
+    title: label ? `${label} Roofing Marketing Articles` : "Roofing Marketing Articles",
     description: label
-      ? `Articles tagged ${label} for roofing marketing strategy.`
-      : "Tagged blog content.",
+      ? `Roofing marketing articles tagged ${label}, including practical SEO, lead generation, conversion, and growth strategy insights.`
+      : "Tagged roofing marketing blog content.",
     path: `/blog/tags/${tag}`,
+    keywords: label ? [label, "roofing marketing blog", "marketing for roofers"] : undefined,
   });
 }
 
@@ -48,6 +50,26 @@ export default async function BlogTagPage({
 
   return (
     <div className="mx-auto w-full max-w-5xl space-y-8 px-6 py-16 sm:py-20">
+      <JsonLd
+        data={buildCollectionPageSchema({
+          name: `${label} Roofing Marketing Articles`,
+          description: `Roofing marketing articles tagged ${label}.`,
+          path: `/blog/tags/${tag}`,
+          items: posts.map((post) => ({
+            name: post.title,
+            path: `/blog/${post.slug}`,
+            description: post.description,
+          })),
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Marketing Blog", path: "/blog" },
+          { name: label, path: `/blog/tags/${tag}` },
+        ])}
+      />
+
       <section className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-10">
         <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
           Blog Tag

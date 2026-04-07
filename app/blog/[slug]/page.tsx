@@ -10,7 +10,7 @@ import {
   getBlogPostReadTime,
   getRelatedBlogPosts,
 } from "@/lib/blog";
-import { buildArticleSchema, buildMetadata } from "@/lib/seo";
+import { buildArticleSchema, buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -67,7 +67,15 @@ export default async function BlogDetailPage({
           path: `/blog/${post.slug}`,
           publishedAt: post.publishedAt,
           keywords: post.tags,
+          type: "BlogPosting",
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Marketing Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ])}
       />
 
       <header className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-10">

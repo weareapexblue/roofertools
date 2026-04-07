@@ -9,12 +9,12 @@ import {
   getLatestBlogPosts,
   slugifyTag,
 } from "@/lib/blog";
-import { buildItemListSchema, buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing Marketing Blog for Roofers",
+  title: "Roofing Marketing Blog for SEO, Leads, and Growth",
   description:
-    "Fresh roofing marketing articles for roofing owners on SEO, storm marketing, lead response, backlinks, financing, and conversion systems.",
+    "Read roofing marketing blog articles on SEO, storm marketing, lead response, backlinks, financing, conversion systems, and growth planning.",
   path: "/blog",
   keywords: [
     "roofing marketing blog",
@@ -32,8 +32,10 @@ export default function BlogIndexPage() {
   return (
     <div className="mx-auto w-full max-w-7xl space-y-10 px-6 py-16 sm:py-20">
       <JsonLd
-        data={buildItemListSchema({
+        data={buildCollectionPageSchema({
           name: "Roofing Marketing Blog",
+          description:
+            "Fresh roofing marketing articles for roofing owners on SEO, backlinks, storm demand, lead response, and conversion systems.",
           path: "/blog",
           items: posts.map((post) => ({
             name: post.title,
@@ -41,6 +43,12 @@ export default function BlogIndexPage() {
             description: post.description,
           })),
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Marketing Blog", path: "/blog" },
+        ])}
       />
 
       <section className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-10">

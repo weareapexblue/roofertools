@@ -8,13 +8,13 @@ import { SectionHeading } from "@/components/section-heading";
 import { formatBlogDate, getBlogPostReadTime, getLatestBlogPosts } from "@/lib/blog";
 import { products } from "@/lib/products";
 import { resources } from "@/lib/resources";
-import { buildFaqSchema, buildMetadata } from "@/lib/seo";
-import { SITE_SUBHEAD, SITE_TAGLINE, SITE_URL } from "@/lib/site";
+import { buildFaqSchema, buildItemListSchema, buildMetadata } from "@/lib/seo";
+import { SITE_SUBHEAD, SITE_TAGLINE } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: "Roofer Marketing Tools for Roofing Companies",
+  title: "Roofer Marketing Tools for Roofing SEO, Backlinks, and Leads",
   description:
-    "Roofer marketing tools, fresh roofing growth content, premium backlinks, SEO press releases, local SEO starter, and SEO microsites for roofing companies. Direct purchase. USA based.",
+    "Buy productized roofer marketing tools: roofing backlinks, SEO press releases, local SEO, microsites, free calculators, and long-form SEO playbooks.",
   path: "/",
   keywords: [
     "roofer marketing",
@@ -24,9 +24,9 @@ export const metadata = buildMetadata({
     "roofing lead generation",
     "storm roofing marketing",
   ],
-  openGraphTitle: "Roofer Marketing Tools for Roofing Companies",
+  openGraphTitle: "Roofer Marketing Tools for Roofing SEO, Backlinks, and Leads",
   openGraphDescription:
-    "Premium roofing backlinks, press distribution, local SEO, and microsite builds. Direct checkout.",
+    "Productized roofing backlinks, press distribution, local SEO, microsite builds, calculators, and search playbooks with direct checkout.",
   openGraphImage: "/og/roofer-marketing-tools.webp",
 });
 
@@ -76,19 +76,20 @@ export default function HomePage() {
     }))
   );
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "RooferMarketingTools.com",
-    url: SITE_URL,
-    slogan: SITE_TAGLINE,
-    sameAs: ["https://seoaha.com", "https://ppckitchen.com", "https://apexblueai.com"],
-  };
-
   return (
     <div className="mx-auto w-full max-w-7xl space-y-20 px-6 py-16 sm:py-20">
-      <JsonLd data={organizationSchema} />
       <JsonLd data={buildFaqSchema(homeFaq)} />
+      <JsonLd
+        data={buildItemListSchema({
+          name: "Roofer Marketing Tools Product Catalog",
+          path: "/",
+          items: products.map((product) => ({
+            name: product.name,
+            path: `/${product.silo}/${product.slug}`,
+            description: product.summary,
+          })),
+        })}
+      />
 
       <section className="motion-reveal relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-soft)] sm:p-12">
         <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[color:color-mix(in_srgb,var(--accent)_20%,transparent)] blur-3xl" />
@@ -100,10 +101,12 @@ export default function HomePage() {
               RooferMarketingTools.com
             </p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--text)] sm:text-6xl">
-              {SITE_TAGLINE}
+              Roofer Marketing Tools for Roofing SEO, Backlinks, and Lead Growth
             </h1>
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] sm:text-lg">
-              {SITE_SUBHEAD}
+              {SITE_TAGLINE}: productized roofing backlinks, SEO press releases, local SEO,
+              microsites, free calculators, and search playbooks for roofing companies.
+              {` ${SITE_SUBHEAD}`}
             </p>
           </div>
 

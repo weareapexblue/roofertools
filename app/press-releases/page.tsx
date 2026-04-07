@@ -1,14 +1,19 @@
 import { JsonLd } from "@/components/json-ld";
 import { SiloOverview } from "@/components/silo-overview";
 import { getProductsBySilo } from "@/lib/products";
-import { buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing Press Release Distribution",
+  title: "Roofing Press Release Distribution for SEO Authority",
   description:
-    "SEO supercharged press release distribution for roofing authority and brand signal amplification.",
+    "Launch roofing press release distribution for SEO authority, branded search signals, market expansion, and campaign-level visibility.",
   path: "/press-releases",
-  keywords: ["roofing press release distribution", "roofer marketing", "roofing SEO packages"],
+  keywords: [
+    "roofing press release distribution",
+    "roofing press release service",
+    "roofer marketing",
+    "roofing SEO packages",
+  ],
 });
 
 export default function PressReleasesPage() {
@@ -17,13 +22,23 @@ export default function PressReleasesPage() {
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
+        data={buildCollectionPageSchema({
           name: "Roofing Press Release Distribution",
           description:
             "Authority, brand amplification, and search signal stacking through one-time distribution products.",
-        }}
+          path: "/press-releases",
+          items: products.map((product) => ({
+            name: product.name,
+            path: `/${product.silo}/${product.slug}`,
+            description: product.summary,
+          })),
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Press Release Distribution", path: "/press-releases" },
+        ])}
       />
       <SiloOverview
         eyebrow="Press Releases"

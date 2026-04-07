@@ -8,7 +8,7 @@ import { ProductCard } from "@/components/product-card";
 import { formatBlogDate, getBlogPostReadTime, getLatestBlogPosts } from "@/lib/blog";
 import { getProductById } from "@/lib/products";
 import { getResourceBySlug, getResourceSections, resources } from "@/lib/resources";
-import { buildArticleSchema, buildFaqSchema, buildMetadata } from "@/lib/seo";
+import { buildArticleSchema, buildBreadcrumbSchema, buildFaqSchema, buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return resources.map((resource) => ({ slug: resource.slug }));
@@ -31,7 +31,7 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: resource.title,
+    title: `${resource.title} for Roofing Companies`,
     description: resource.description,
     path: `/resources/${resource.slug}`,
     keywords: [resource.focusKeyword, "roofing marketing tools", "SEO for roofing companies"],
@@ -72,6 +72,13 @@ export default async function ResourceDetailPage({
           modifiedAt: "2026-03-13",
           keywords: [resource.focusKeyword, "roofing marketing"],
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Marketing Resources", path: "/resources" },
+          { name: resource.title, path: `/resources/${resource.slug}` },
+        ])}
       />
       <JsonLd data={buildFaqSchema(resource.faq)} />
 

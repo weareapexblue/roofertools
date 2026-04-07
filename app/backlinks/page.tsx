@@ -1,14 +1,19 @@
 import { JsonLd } from "@/components/json-ld";
 import { SiloOverview } from "@/components/silo-overview";
 import { getProductsBySilo } from "@/lib/products";
-import { buildMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing Backlink Packages",
+  title: "Roofing Backlink Packages for Authority-First Roofer SEO",
   description:
-    "Premium roofing backlink packs with one-time pricing and direct checkout for authority-focused SEO growth.",
+    "Buy premium roofing backlink packages for authority-focused roofer SEO, service-page support, and local ranking momentum with direct checkout.",
   path: "/backlinks",
-  keywords: ["roofing backlinks", "roofing backlink packages", "roofer marketing"],
+  keywords: [
+    "roofing backlinks",
+    "roofing backlink packages",
+    "roofer SEO backlinks",
+    "roofer marketing",
+  ],
 });
 
 export default function BacklinksPage() {
@@ -17,13 +22,23 @@ export default function BacklinksPage() {
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
+        data={buildCollectionPageSchema({
           name: "Roofing Backlink Packages",
           description:
             "Hard-to-acquire, niche-relevant authority backlink packs built for roofing companies.",
-        }}
+          path: "/backlinks",
+          items: backlog.map((product) => ({
+            name: product.name,
+            path: `/${product.silo}/${product.slug}`,
+            description: product.summary,
+          })),
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Roofing Backlink Packages", path: "/backlinks" },
+        ])}
       />
       <SiloOverview
         eyebrow="Backlinks"
