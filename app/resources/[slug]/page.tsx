@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/json-ld";
 import { ProductCard } from "@/components/product-card";
 import { formatBlogDate, getBlogPostReadTime, getLatestBlogPosts } from "@/lib/blog";
 import { getProductById } from "@/lib/products";
-import { getResourceBySlug, getResourceSections, resources } from "@/lib/resources";
+import { getRelatedResources, getResourceBySlug, getResourceSections, resources } from "@/lib/resources";
 import { buildArticleSchema, buildBreadcrumbSchema, buildFaqSchema, buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -59,6 +59,7 @@ export default async function ResourceDetailPage({
   const relatedProducts = resource.relatedProductIds
     .map((id) => getProductById(id))
     .filter((item) => item !== undefined);
+  const relatedResources = getRelatedResources(resource, 4);
   const latestBlogPosts = getLatestBlogPosts(3);
 
   return (
@@ -219,6 +220,36 @@ export default async function ResourceDetailPage({
           })}
         </div>
       </section>
+
+      {relatedResources.length ? (
+        <section className="space-y-5 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+          <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+            Related Roofing Marketing Guides
+          </h2>
+          <p className="text-sm leading-7 text-[var(--muted)]">
+            Use these supporting playbooks to deepen coverage around this topic and move through the internal content cluster.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {relatedResources.map((relatedResource) => (
+              <Link
+                key={relatedResource.slug}
+                href={`/resources/${relatedResource.slug}`}
+                className="rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">
+                  Related Guide
+                </p>
+                <h3 className="mt-2 text-lg font-semibold tracking-tight text-[var(--text)]">
+                  {relatedResource.title}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
+                  {relatedResource.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="space-y-6 rounded-2xl border border-[var(--border)] bg-[var(--surface-alt)] p-6">
         <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">

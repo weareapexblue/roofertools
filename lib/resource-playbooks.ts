@@ -64,11 +64,11 @@ const PLAYBOOKS: Record<string, ResourcePlaybook> = {
       "Expansion-focused contractors opening new service areas without bloating ad spend.",
     ],
     queryMap: [
-      "roofer marketing strategy for [city]",
-      "best marketing channels for roofing contractors",
-      "how to generate roofing leads without buying lead lists",
-      "roofing marketing plan template",
-      "roofing company growth system",
+      "roofer marketing",
+      "roofing marketing",
+      "marketing for roofing companies",
+      "marketing for roofers",
+      "roofer marketing services",
     ],
     clusterBlueprint: [
       "Core strategy page: brand positioning, service mix, and market selection framework.",
@@ -812,11 +812,11 @@ const PLAYBOOKS: Record<string, ResourcePlaybook> = {
       "Operators preparing for multi-market expansion.",
     ],
     queryMap: [
-      "roofing digital marketing infrastructure",
-      "roofing marketing systems",
-      "how to build roofing marketing operations",
-      "roofing growth infrastructure",
-      "marketing framework for roofing company",
+      "roofing digital marketing",
+      "digital marketing for roofers",
+      "digital marketing for roofing companies",
+      "online marketing for roofers",
+      "roofer digital marketing",
     ],
     clusterBlueprint: [
       "Strategy and governance pages defining roles, cadence, and QA standards.",
@@ -895,10 +895,11 @@ const PLAYBOOKS: Record<string, ResourcePlaybook> = {
       "Teams transitioning from residential-heavy demand sources.",
     ],
     queryMap: [
+      "commercial roofing marketing",
       "marketing for commercial roofers",
       "commercial roofing lead generation",
+      "b2b marketing for roofing companies",
       "commercial roofing SEO strategy",
-      "how to market commercial roofing services",
       "commercial roof maintenance marketing",
     ],
     clusterBlueprint: [
@@ -1227,11 +1228,11 @@ const PLAYBOOKS: Record<string, ResourcePlaybook> = {
       "Companies building topical authority in new markets.",
     ],
     queryMap: [
+      "content marketing for roofing companies",
+      "content marketing for roofing industry",
+      "content marketing for roofers",
+      "roofer marketing content",
       "roofing content marketing",
-      "content strategy for roofing company",
-      "roofing blog topics that generate leads",
-      "roofing SEO content plan",
-      "content funnel for roofers",
     ],
     clusterBlueprint: [
       "Awareness content for problem identification and early education.",
@@ -1310,11 +1311,11 @@ const PLAYBOOKS: Record<string, ResourcePlaybook> = {
       "Operators trying to balance emergency and planned demand.",
     ],
     queryMap: [
-      "roofing keyword research",
-      "best roofing keywords for local SEO",
-      "roof replacement keyword strategy",
-      "commercial roofing keyword list",
-      "storm damage roofing keywords",
+      "keywords for roofing company",
+      "roofing keywords",
+      "best keywords for roofing companies",
+      "roofing company keyword data",
+      "roofing SEO keywords",
     ],
     clusterBlueprint: [
       "Head-term strategy page for category-level demand.",
@@ -1629,6 +1630,172 @@ const PLAYBOOKS: Record<string, ResourcePlaybook> = {
         "Budget from unit economics, not industry myths",
         "Separate long-term asset spend from short-term media spend",
         "Use trigger-based scaling rules",
+      ],
+    },
+  },
+  "marketing-for-roofing-companies": {
+    marketLens:
+      "Marketing for roofing companies performs best when channel selection is tied to service mix, close-rate behavior, and follow-up capacity instead of generic contractor advice.",
+    buyerSegments: [
+      "Owner-led roofing companies building a repeatable in-house growth plan.",
+      "Operators replacing disconnected vendors with one clearer system.",
+      "Teams wanting stronger organic demand before scaling paid media.",
+      "Contractors needing a better balance between lead volume and lead quality.",
+    ],
+    queryMap: [
+      "marketing for roofing companies",
+      "marketing for roofing company",
+      "marketing for roofers",
+      "marketing for roofing contractors",
+      "roofer marketing services",
+    ],
+    clusterBlueprint: [
+      "Core strategy page mapping channel priorities to business stage.",
+      "Digital acquisition pages for SEO, local SEO, content, and authority.",
+      "Sales enablement pages for estimates, financing, and trust proof.",
+      "Operations pages for response speed, follow-up, and routing standards.",
+      "Financial control pages for CAC, ROI, and quarterly budget decisions.",
+    ],
+    failurePatterns: [
+      "Trying to scale every channel at once with no priority order.",
+      "Using generic contractor messaging instead of roofing-specific proof.",
+      "No alignment between marketing promises and sales follow-up quality.",
+      "Publishing content without internal links to money pages.",
+      "Overweighting impressions instead of qualified pipeline outcomes.",
+    ],
+    localNuances: [
+      "Storm-heavy markets need faster lead routing and claim-safe messaging.",
+      "Affluent suburbs often convert through trust proof and financing clarity.",
+      "Commercial corridors require slower-funnel education and credibility content.",
+      "Lower-density markets need tighter service-area messaging and travel clarity.",
+    ],
+    kpiScorecard: [
+      {
+        metric: "Qualified Lead Volume",
+        benchmark: "Month-over-month growth",
+        rationale: "Measures whether marketing is attracting fit demand.",
+      },
+      {
+        metric: "Lead-to-Inspection Rate",
+        benchmark: "35-55%",
+        rationale: "Shows whether positioning and CTA structure are working.",
+      },
+      {
+        metric: "Blended CAC",
+        benchmark: "Inside margin-safe targets",
+        rationale: "Protects growth quality while the mix evolves.",
+      },
+      {
+        metric: "Revenue by Channel Cluster",
+        benchmark: "Clear monthly attribution",
+        rationale: "Supports better reallocation decisions.",
+      },
+      {
+        metric: "Response-Time Compliance",
+        benchmark: "Fast and consistent",
+        rationale: "Prevents good traffic from leaking out of the funnel.",
+      },
+    ],
+    tacticalChecklist: [
+      "Choose the top three channels that match your market and crew capacity.",
+      "Map content and landing pages to service and city priorities.",
+      "Standardize trust assets and response SLAs across the funnel.",
+      "Route internal links from guides and blogs into money pages.",
+      "Review qualified lead economics monthly before adding spend.",
+    ],
+    topicModule: {
+      heading: "Marketing Mix Discipline for Roofers",
+      paragraphs: [
+        "Roofing companies usually do better with a disciplined marketing mix than with channel sprawl. The strongest plan pairs a stable search footprint with authority development, simple conversion systems, and reporting that leadership can actually inspect each month.",
+        "That discipline matters because roofing growth compounds unevenly. Some channels create immediate demand, while others strengthen trust and lower acquisition costs over time. A company that knows how each layer contributes can scale with less waste and fewer surprises.",
+      ],
+      bullets: [
+        "Pick a channel mix that matches actual operating capacity",
+        "Connect every content asset to a revenue-facing page",
+        "Use monthly economics reviews to protect budget quality",
+      ],
+    },
+  },
+  "roofing-marketing-materials": {
+    marketLens:
+      "Roofing marketing materials should support selling, follow-up, and trust transfer. Materials that look polished but do not move the buyer forward create busywork, not pipeline lift.",
+    buyerSegments: [
+      "Roofers needing better leave-behinds and estimate support assets.",
+      "Sales-led teams wanting stronger consistency across reps.",
+      "Companies that need trust materials for financing and warranty conversations.",
+      "Operators turning website content into usable field sales assets.",
+    ],
+    queryMap: [
+      "roofing marketing materials",
+      "roofer marketing content",
+      "roofing marketing content",
+      "content marketing for roofing companies",
+      "sales materials for roofing company",
+    ],
+    clusterBlueprint: [
+      "Pre-inspection materials for trust and expectation setting.",
+      "Estimate support materials for scope, warranty, and financing clarity.",
+      "Follow-up materials for stalled bids and objection handling.",
+      "Storm-specific materials for documentation and claim education.",
+      "Website content pages that double as rep-ready proof assets.",
+    ],
+    failurePatterns: [
+      "Designing materials for appearance instead of sales utility.",
+      "No version control across reps and locations.",
+      "Leaving financing, warranty, and process questions unanswered.",
+      "Creating materials with no tie-in to website conversion paths.",
+      "No measurement of whether materials improve close behavior.",
+    ],
+    localNuances: [
+      "Storm markets need documentation and claim-process materials ready in advance.",
+      "Affluent neighborhoods often need stronger design, financing, and warranty proof.",
+      "Commercial buyers need technical and lifecycle materials instead of consumer copy.",
+      "Suburban markets benefit from neighborhood proof and service-area clarity.",
+    ],
+    kpiScorecard: [
+      {
+        metric: "Estimate-to-Close Rate",
+        benchmark: "Improving after material rollout",
+        rationale: "Shows whether materials are reducing sales friction.",
+      },
+      {
+        metric: "Follow-Up Response Rate",
+        benchmark: "Higher after structured assets are used",
+        rationale: "Measures whether support content keeps deals active.",
+      },
+      {
+        metric: "Financing Engagement",
+        benchmark: "Growing share of qualified prospects",
+        rationale: "Validates usefulness of financing materials.",
+      },
+      {
+        metric: "Sales Asset Usage Consistency",
+        benchmark: "Standardized across reps",
+        rationale: "Prevents messaging drift and uneven performance.",
+      },
+      {
+        metric: "Content-Assisted Revenue",
+        benchmark: "Quarterly growth",
+        rationale: "Connects marketing materials to booked work.",
+      },
+    ],
+    tacticalChecklist: [
+      "Audit every sales stage for the questions buyers ask most often.",
+      "Turn high-performing website pages into reusable estimate support assets.",
+      "Build leave-behinds for financing, warranty, process, and project proof.",
+      "Create a standard follow-up asset stack for stalled bids.",
+      "Measure close-rate lift after materials are adopted by the team.",
+    ],
+    topicModule: {
+      heading: "Sales Enablement Content That Actually Gets Used",
+      paragraphs: [
+        "Roofing marketing materials are most valuable when the field team actually uses them. That means they need to solve a real moment in the sales process: trust before the inspection, clarity after the estimate, or reassurance during financing and scheduling decisions.",
+        "The best approach is to build materials from buyer friction, not from abstract branding goals. When a leave-behind, PDF, email sequence, or website page answers a real objection, it strengthens both conversion rates and consistency across the team.",
+      ],
+      bullets: [
+        "Build materials around buyer questions, not vanity collateral",
+        "Reuse website authority pages as sales tools",
+        "Track whether materials change estimate and follow-up behavior",
       ],
     },
   },

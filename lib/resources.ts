@@ -5,22 +5,48 @@ export type ResourceGuide = {
   description: string;
   focusKeyword: string;
   relatedProductIds: string[];
+  supportingResourceSlugs?: string[];
   faq: Array<{ question: string; answer: string }>;
 };
 
 export const resources: ResourceGuide[] = [
   {
     slug: "roofer-marketing-guide",
-    title: "Roofer Marketing Guide",
+    title: "Roofer Marketing Guide for Roofing Companies",
     description:
-      "A complete framework for building profitable roofing lead flow through search visibility, authority assets, and conversion systems.",
+      "A complete roofer marketing guide for roofing companies that need stronger digital marketing, authority assets, and conversion systems.",
     focusKeyword: "roofer marketing",
     relatedProductIds: [
       "premium-roofing-backlink-packs",
       "roofing-local-seo-starter",
       "roofing-seo-microsite-7-page-lead-engine",
     ],
+    supportingResourceSlugs: [
+      "marketing-for-roofing-companies",
+      "roofing-digital-marketing-infrastructure",
+      "roofing-keyword-research-guide",
+      "roofing-marketing-materials",
+    ],
     faq: buildDefaultFaq("roofer marketing"),
+  },
+  {
+    slug: "marketing-for-roofing-companies",
+    title: "Marketing for Roofing Companies",
+    description:
+      "Marketing for roofing companies covering channel mix, SEO, digital marketing, authority building, and lead handling for profitable growth.",
+    focusKeyword: "marketing for roofing companies",
+    relatedProductIds: [
+      "roofing-local-seo-starter",
+      "premium-roofing-backlink-packs",
+      "roofing-seo-microsite-7-page-lead-engine",
+    ],
+    supportingResourceSlugs: [
+      "roofer-marketing-guide",
+      "roofing-digital-marketing-infrastructure",
+      "roofing-keyword-research-guide",
+      "roofing-marketing-materials",
+    ],
+    faq: buildDefaultFaq("marketing for roofing companies"),
   },
   {
     slug: "seo-for-roofing-companies",
@@ -37,16 +63,22 @@ export const resources: ResourceGuide[] = [
   },
   {
     slug: "roofing-contractor-lead-generation",
-    title: "Roofing Contractor Lead Generation",
+    title: "Roofing Lead Generation",
     description:
-      "Lead generation strategy for roofers across branded search, service queries, and city-intent capture.",
-    focusKeyword: "roofing contractor lead generation",
+      "Roofing lead generation strategy for roofers across branded search, service queries, city-intent capture, and sales follow-up.",
+    focusKeyword: "roofing lead generation",
     relatedProductIds: [
       "roofing-seo-microsite-7-page-lead-engine",
       "roofing-local-seo-starter",
       "seo-supercharged-press-releases",
     ],
-    faq: buildDefaultFaq("roofing contractor lead generation"),
+    supportingResourceSlugs: [
+      "roofer-marketing-guide",
+      "roofing-digital-marketing-infrastructure",
+      "roofing-conversion-optimization",
+      "roofing-keyword-research-guide",
+    ],
+    faq: buildDefaultFaq("roofing lead generation"),
   },
   {
     slug: "roofing-backlinks-explained",
@@ -107,28 +139,39 @@ export const resources: ResourceGuide[] = [
   },
   {
     slug: "roofing-digital-marketing-infrastructure",
-    title: "Roofing Digital Marketing Infrastructure",
+    title: "Roofing Digital Marketing",
     description:
-      "How to replace fragmented tactics with repeatable, measurable digital growth infrastructure.",
-    focusKeyword: "roofing digital marketing infrastructure",
+      "Digital marketing for roofers covering SEO, authority building, content, local visibility, and conversion systems that compound.",
+    focusKeyword: "roofing digital marketing",
     relatedProductIds: [
       "roofing-local-seo-starter",
       "roofing-authority-microsite-50-page-cluster-site",
       "seo-supercharged-press-releases",
     ],
-    faq: buildDefaultFaq("roofing digital marketing infrastructure"),
+    supportingResourceSlugs: [
+      "roofer-marketing-guide",
+      "marketing-for-roofing-companies",
+      "roofing-content-marketing",
+      "roofing-keyword-research-guide",
+    ],
+    faq: buildDefaultFaq("roofing digital marketing"),
   },
   {
     slug: "marketing-for-commercial-roofers",
-    title: "Marketing for Commercial Roofers",
+    title: "Commercial Roofing Marketing",
     description:
-      "Commercial roofing marketing model focused on high-ticket intent, trust framing, and long-cycle conversion paths.",
-    focusKeyword: "marketing for commercial roofers",
+      "Commercial roofing marketing model focused on high-ticket demand, trust framing, lifecycle content, and long-cycle conversion paths.",
+    focusKeyword: "commercial roofing marketing",
     relatedProductIds: [
       "roofing-authority-microsite-50-page-cluster-site",
       "seo-supercharged-press-releases",
     ],
-    faq: buildDefaultFaq("marketing for commercial roofers"),
+    supportingResourceSlugs: [
+      "marketing-for-roofing-companies",
+      "roofing-digital-marketing-infrastructure",
+      "roofer-marketing-guide",
+    ],
+    faq: buildDefaultFaq("commercial roofing marketing"),
   },
   {
     slug: "marketing-for-residential-roofers",
@@ -163,21 +206,52 @@ export const resources: ResourceGuide[] = [
   },
   {
     slug: "roofing-content-marketing",
-    title: "Roofing Content Marketing",
+    title: "Content Marketing for Roofing Companies",
     description:
-      "Content strategy for roofing brands that maps buying stages to pages, internal links, and conversion events.",
-    focusKeyword: "roofing content marketing",
+      "Content marketing for roofing companies that need better internal linking, sales enablement, and topical authority instead of random blog volume.",
+    focusKeyword: "content marketing for roofing companies",
     relatedProductIds: ["roofing-authority-microsite-50-page-cluster-site"],
-    faq: buildDefaultFaq("roofing content marketing"),
+    supportingResourceSlugs: [
+      "roofing-marketing-materials",
+      "roofing-keyword-research-guide",
+      "roofer-marketing-guide",
+      "marketing-for-roofing-companies",
+    ],
+    faq: buildDefaultFaq("content marketing for roofing companies"),
+  },
+  {
+    slug: "roofing-marketing-materials",
+    title: "Roofing Marketing Materials",
+    description:
+      "Roofing marketing materials that support inspections, estimates, financing conversations, follow-up, and higher close rates.",
+    focusKeyword: "roofing marketing materials",
+    relatedProductIds: [
+      "roofing-local-seo-starter",
+      "roofing-seo-microsite-7-page-lead-engine",
+      "seo-supercharged-press-releases",
+    ],
+    supportingResourceSlugs: [
+      "roofing-content-marketing",
+      "roofing-keyword-research-guide",
+      "marketing-for-roofing-companies",
+      "roofer-marketing-guide",
+    ],
+    faq: buildDefaultFaq("roofing marketing materials"),
   },
   {
     slug: "roofing-keyword-research-guide",
-    title: "Roofing Keyword Research Guide",
+    title: "Roofing Keywords: Best Keywords for Roofing Companies",
     description:
-      "Keyword strategy for roofing campaigns using intent clusters, location modifiers, and service-line depth.",
-    focusKeyword: "roofing keyword research",
+      "Best keywords for roofing companies across service, city, storm, financing, and commercial search intent.",
+    focusKeyword: "roofing keywords",
     relatedProductIds: ["roofing-local-seo-starter", "roofing-seo-microsite-7-page-lead-engine"],
-    faq: buildDefaultFaq("roofing keyword research"),
+    supportingResourceSlugs: [
+      "roofing-digital-marketing-infrastructure",
+      "marketing-for-roofing-companies",
+      "roofing-contractor-lead-generation",
+      "roofer-marketing-guide",
+    ],
+    faq: buildDefaultFaq("roofing keywords"),
   },
   {
     slug: "roofing-conversion-optimization",
@@ -232,6 +306,41 @@ export function getResourceSections(resource: ResourceGuide): ResourceSection[] 
   return buildResourceSections(resource);
 }
 
+export function getResourceBySlug(slug: string) {
+  return resources.find((resource) => resource.slug === slug);
+}
+
+export function getResourcesBySlugs(slugs: string[]) {
+  return slugs
+    .map((slug) => getResourceBySlug(slug))
+    .filter((resource): resource is ResourceGuide => resource !== undefined);
+}
+
+export function getRelatedResources(resource: ResourceGuide, limit = 4) {
+  const explicit = getResourcesBySlugs(resource.supportingResourceSlugs || []).filter(
+    (candidate) => candidate.slug !== resource.slug
+  );
+  const explicitSlugs = new Set(explicit.map((candidate) => candidate.slug));
+  const resourceTokens = tokenizeResourceText(resource);
+
+  const fallback = resources
+    .filter((candidate) => candidate.slug !== resource.slug && !explicitSlugs.has(candidate.slug))
+    .map((candidate) => ({
+      candidate,
+      score:
+        candidate.relatedProductIds.filter((id) => resource.relatedProductIds.includes(id)).length * 3 +
+        tokenizeResourceText(candidate).filter((token) => resourceTokens.includes(token)).length,
+    }))
+    .filter(({ score }) => score > 0)
+    .sort(
+      (left, right) =>
+        right.score - left.score || left.candidate.title.localeCompare(right.candidate.title)
+    )
+    .map(({ candidate }) => candidate);
+
+  return [...explicit, ...fallback].slice(0, limit);
+}
+
 function buildDefaultFaq(topic: string) {
   return [
     {
@@ -262,6 +371,9 @@ function buildDefaultFaq(topic: string) {
   ];
 }
 
-export function getResourceBySlug(slug: string) {
-  return resources.find((resource) => resource.slug === slug);
+function tokenizeResourceText(resource: ResourceGuide) {
+  return [...new Set(`${resource.title} ${resource.focusKeyword} ${resource.description}`
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((token) => token.length > 2))];
 }

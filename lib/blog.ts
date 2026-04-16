@@ -4,6 +4,7 @@ export type BlogPost = {
   description: string;
   publishedAt: string;
   tags: string[];
+  relatedResourceSlugs?: string[];
   sections: Array<{ heading: string; paragraphs: string[] }>;
 };
 
@@ -625,6 +626,296 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "In roofing, the winning plan is rarely the most complicated one. It is the one the owner, office staff, and sales team can repeat without breaking. That usually means a focused content roadmap, a few strong authority assets, disciplined follow-up, and clean monthly inspection of the numbers that matter.",
           "Consistency is what turns a marketing plan into real growth infrastructure. Once that base is working, expansion becomes much easier and much less risky.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-market-a-roofing-company",
+    title: "How to Market a Roofing Company",
+    description:
+      "A step-by-step marketing framework for roofing companies that need more qualified leads without wasting budget on disconnected tactics.",
+    publishedAt: "2026-04-15",
+    tags: ["Roofing Marketing", "Strategy", "How-To"],
+    relatedResourceSlugs: [
+      "marketing-for-roofing-companies",
+      "roofer-marketing-guide",
+      "roofing-digital-marketing-infrastructure",
+      "roofing-keyword-research-guide",
+    ],
+    sections: [
+      {
+        heading: "Start With Service, City, and Margin Priorities",
+        paragraphs: [
+          "The first step in marketing a roofing company is deciding what you actually want more of. A business that makes strong margin on full replacements should not market the same way as a company chasing emergency repairs, commercial maintenance, or storm-response work. The right message, page plan, and offer structure depend on which jobs the company wants to win more often.",
+          "City priority matters just as much. Most roofers spread messaging too broadly and end up with generic content that ranks weakly and converts worse. A better approach is to define the top service-city combinations by demand, margin, and competition, then build marketing around those combinations instead of hoping one broad message covers everything.",
+        ],
+      },
+      {
+        heading: "Build the Core Search Footprint Before Chasing More Channels",
+        paragraphs: [
+          "Most roofing companies should start with the base search footprint: service pages, local SEO cleanup, trust proof, review generation, and a contact path that works on mobile. Without that foundation, every other marketing tactic becomes less efficient because buyers arrive on pages that do not explain process, prove credibility, or make the next step easy.",
+          "This is also the point where a company should tighten business data consistency, add FAQs, and make sure core service pages align to real buyer questions. Search visibility improves when the site is clearer, but just as important, close rates improve because buyers are less confused when they contact the team.",
+        ],
+      },
+      {
+        heading: "Use Content to Remove Sales Friction, Not Just Add Pages",
+        paragraphs: [
+          "Good roofing marketing content solves the same problems that slow down estimates. Buyers want clarity on repair versus replacement, insurance timelines, financing, warranties, storm response, and service-area expectations. When content answers those questions directly, it helps both rankings and sales conversations.",
+          "That is why the best content plan is tied to the sales process. Instead of publishing random articles, roofers should build pages that make inspections easier to book, estimates easier to understand, and objections easier to resolve. Marketing works better when the website and the sales team are reinforcing the same message.",
+        ],
+      },
+      {
+        heading: "Add Authority After the Money Pages Are Ready",
+        paragraphs: [
+          "Many roofers buy backlinks, run press campaigns, or spend on ads before their core pages are worth amplifying. That usually creates weaker returns than expected because authority and traffic are being sent to pages with unclear positioning or thin proof. The better sequence is to get the money pages conversion-ready first and then add authority support around them.",
+          "Once the site has clear service pages, clean internal links, and strong CTA structure, authority layers become much more productive. Backlinks, mentions, and distribution work best when they reinforce a page that already deserves to rank and convert. This is how marketing turns into a compounding system rather than a string of disconnected experiments.",
+        ],
+      },
+      {
+        heading: "Treat Response Speed as a Marketing Variable",
+        paragraphs: [
+          "Marketing does not stop when the lead form is submitted. In roofing, response speed often determines whether the job is even still available to win. A company can improve rankings, publish more content, and still underperform if the team is slow to call back, inconsistent in follow-up, or vague about next steps after the first contact.",
+          "That is why a practical roofing marketing plan includes routing rules, inspection scheduling standards, and follow-up sequences. Faster response and cleaner handoff from marketing to sales usually raise ROI faster than adding more traffic. The lead that never gets contacted properly was not a traffic problem to begin with.",
+        ],
+      },
+      {
+        heading: "Review the System Monthly and Scale What Holds Up",
+        paragraphs: [
+          "The strongest roofing marketing programs are reviewed every month with a short, disciplined scorecard: qualified leads, inspection rate, close rate, booked revenue by source, and the next three page priorities. This keeps the team focused on the actual drivers of growth instead of vanity metrics that look impressive but do not guide decisions.",
+          "Scaling should happen only after that scorecard looks healthy. If close rates are stable, response time is tight, and the lead mix is improving, then it makes sense to add more content, authority, and budget. If those fundamentals are weak, more activity usually creates more chaos instead of more profitable growth.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "marketing-plan-for-roofing-company",
+    title: "Marketing Plan for Roofing Company: A 90-Day Version",
+    description:
+      "A 90-day marketing plan for roofing companies that need a practical sequence for SEO, content, authority, and follow-up.",
+    publishedAt: "2026-04-14",
+    tags: ["Planning", "Roofing Marketing", "ROI"],
+    relatedResourceSlugs: [
+      "marketing-for-roofing-companies",
+      "roofer-marketing-guide",
+      "roofing-marketing-roi-framework",
+      "roofing-keyword-research-guide",
+    ],
+    sections: [
+      {
+        heading: "Weeks 1-2: Set Targets and Tighten the Core Offer",
+        paragraphs: [
+          "A usable roofing marketing plan starts with three numbers: target qualified leads, target close rate, and target acquisition cost. Without those inputs, channel decisions turn into guesses. The first two weeks should clarify which services and markets matter most, what the sales team can realistically handle, and which offers are currently easiest to close profitably.",
+          "This is also where the company should simplify its message. If the site, ads, sales scripts, and follow-up language all describe the business differently, performance will stay uneven no matter how much activity is added. Strong plans tighten the offer first so every future page and campaign reinforces the same positioning.",
+        ],
+      },
+      {
+        heading: "Weeks 2-4: Fix the Highest-Leverage Website and Local SEO Issues",
+        paragraphs: [
+          "In the first month, roofers usually get the fastest benefit from cleaning up the pages that already sit closest to money. That means core service pages, city pages, Google Business Profile alignment, review flow, and mobile contact paths. If those assets are weak, new content will have less impact because the site cannot convert intent efficiently.",
+          "The plan here should be narrow, not broad. Pick the small set of pages most tied to revenue and make them better first. Clearer headings, stronger proof, simpler calls to action, and cleaner local relevance often produce more value than launching five new low-priority pages at once.",
+        ],
+      },
+      {
+        heading: "Weeks 4-6: Publish the First Content Cluster",
+        paragraphs: [
+          "After the foundation is stable, the next step is to publish the first content cluster around the highest-value query theme. That cluster should include one anchor page, two or three supporting articles, and internal links that move readers toward conversion pages. The goal is not blog volume. The goal is better topical coverage around revenue-facing terms.",
+          "This part of the plan works best when content topics come from sales friction as well as search data. If prospects repeatedly ask about insurance, financing, materials, or timeline expectations, those themes deserve a place in the content roadmap because they support both SEO and closing efficiency.",
+        ],
+      },
+      {
+        heading: "Weeks 6-8: Add Authority and Brand-Signal Support",
+        paragraphs: [
+          "Once the first page cluster is live, a roofing company can start adding authority support to the most important pages. This is where backlinks, mentions, and selective distribution help the new content move faster and hold rankings more consistently. The point is to reinforce the best assets, not spray authority across the entire site randomly.",
+          "At the same time, the company should audit anchor mix, landing-page relevance, and internal linking so authority flows to the right destinations. This keeps the plan disciplined and makes it easier to measure whether the authority budget is strengthening the pages that matter most commercially.",
+        ],
+      },
+      {
+        heading: "Weeks 8-10: Improve Follow-Up and Sales Enablement",
+        paragraphs: [
+          "A 90-day marketing plan should always include a follow-up phase because better lead capture is not enough if the sales system stays inconsistent. Email templates, estimate support content, financing materials, and response-time rules often improve revenue faster than another round of top-of-funnel publishing.",
+          "This is also the point where teams should look at no-show reasons, quote-stall reasons, and the biggest objections heard on calls. Marketing gets stronger when those objections are turned into pages, FAQs, and sales materials instead of being handled ad hoc by each rep.",
+        ],
+      },
+      {
+        heading: "Weeks 10-12: Review Results and Choose the Next Cluster",
+        paragraphs: [
+          "The final part of the 90-day plan is the review. Leadership should look at qualified leads, inspection rate, close rate, CAC, and which pages or topics started to show movement. This is how the next content cluster gets chosen. The choice should come from evidence, not novelty.",
+          "A strong plan ends with clearer prioritization than it started with. By the end of the quarter, the team should know which services deserve more authority, which topics need deeper coverage, and which conversion issues are still capping ROI. That is what turns a plan into a repeatable operating cycle.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-keywords-for-roofing-companies",
+    title: "Best Keywords for Roofing Companies",
+    description:
+      "How to choose the best keywords for roofing companies across service, city, storm, commercial, and high-intent buyer queries.",
+    publishedAt: "2026-04-13",
+    tags: ["Keywords", "SEO", "Roofing Marketing"],
+    relatedResourceSlugs: [
+      "roofing-keyword-research-guide",
+      "roofing-digital-marketing-infrastructure",
+      "roofing-contractor-lead-generation",
+      "marketing-for-roofing-companies",
+    ],
+    sections: [
+      {
+        heading: "The Best Keywords Usually Sit Closest to Revenue",
+        paragraphs: [
+          "The best keywords for roofing companies are rarely the broadest ones. They are usually the phrases tied closest to a clear service, location, and buyer decision. Queries like replacement, repair, inspection, financing, insurance, and city-modified service terms tend to produce better economics than vague category phrases that attract mixed intent.",
+          "That does not mean broad keywords have no value. They still matter for authority and category coverage. But when a roofing company is deciding what to build first, the most practical keywords are the ones most likely to produce qualified calls and inspections, not just impressions.",
+        ],
+      },
+      {
+        heading: "Build Service and City Keyword Combinations First",
+        paragraphs: [
+          "A roofing keyword plan should begin with combinations of service and geography because that is how most high-intent buyers search. Roof replacement in a target city, roof repair in a nearby suburb, commercial maintenance for a specific market, or emergency tarping in a storm-prone region are all examples of search demand that connects cleanly to actual work.",
+          "This structure also protects the site from cannibalization. When each page owns one service-intent combination clearly, it is easier to write stronger copy, build better internal links, and see what the page is supposed to convert. Roofing sites that skip this structure usually end up with overlapping pages that rank inconsistently.",
+        ],
+      },
+      {
+        heading: "Include Storm, Insurance, and Financing Modifiers",
+        paragraphs: [
+          "Many roofing buyers do not search only by service. They search by situation. That is why storm damage, insurance claims, financing, leak urgency, and material-specific terms matter. These modifiers often reveal a buyer who is closer to action and who needs a page tailored to that specific context.",
+          "Search Console data on roofing sites often surfaces these modifiers earlier than expected because buyers use them to narrow the field quickly. A site that has supporting pages for storm response, financing, and process questions will usually capture more commercial value from the same traffic footprint than a site relying on generic service pages alone.",
+        ],
+      },
+      {
+        heading: "Separate Residential and Commercial Keyword Sets",
+        paragraphs: [
+          "Residential and commercial roofing should not share one keyword map. The buyer, timeline, budget logic, and trust proof are different. Residential searches tend to cluster around urgency, neighborhood trust, financing, and homeowner concerns. Commercial searches lean more toward system type, maintenance, compliance, lifecycle cost, and procurement language.",
+          "If those two worlds are blended in one content plan, both usually underperform. Separate keyword sets make it easier to build better pages, use the right proof, and route leads into the right sales process. This is especially important for contractors who want to scale commercial work without confusing the residential funnel.",
+        ],
+      },
+      {
+        heading: "Skip Vanity Terms That Attract the Wrong Visitor",
+        paragraphs: [
+          "Some roofing keywords look exciting because they sound broad and important, but they rarely convert well. Very general terms often attract students, job seekers, early-stage researchers, or people with no strong project intent. A site can spend months chasing these terms and still see little commercial value in return.",
+          "A better filter is to ask what a lead from that keyword would actually look like. Would the searcher likely need an inspection, estimate, or contractor soon? If the answer is unclear, that keyword belongs lower in the roadmap than a phrase tied to a real buying situation.",
+        ],
+      },
+      {
+        heading: "Map Keywords Into Clusters and Internal Links",
+        paragraphs: [
+          "Keywords become more valuable when they are organized into clusters instead of handled as isolated phrases. One anchor page should target the head term, while supporting articles and FAQs capture modifiers, objections, and adjacent angles. Internal links then move authority and users back toward the pages most likely to convert.",
+          "That is how a roofing company turns keyword research into a ranking system. The words themselves matter, but the bigger gain comes from how the site is built around them. Better keyword maps lead to better pages, clearer internal links, and a content plan that compounds instead of colliding with itself.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "roofing-marketing-materials-that-help-sales",
+    title: "Roofing Marketing Materials That Actually Help Sales",
+    description:
+      "The roofing marketing materials that improve inspections, follow-up, financing conversations, and close rates instead of just looking polished.",
+    publishedAt: "2026-04-12",
+    tags: ["Content Marketing", "Sales Enablement", "Conversion"],
+    relatedResourceSlugs: [
+      "roofing-marketing-materials",
+      "roofing-content-marketing",
+      "roofing-conversion-optimization",
+      "marketing-for-roofing-companies",
+    ],
+    sections: [
+      {
+        heading: "Marketing Materials Should Remove Friction in the Sales Process",
+        paragraphs: [
+          "The best roofing marketing materials are useful in a real conversation. They help a homeowner understand next steps, give a commercial buyer more confidence in the process, or help a rep answer the same objection more cleanly. Materials that exist only to look polished rarely change close rates because they are not attached to a real decision point.",
+          "That is why sales teams should define the asset list together with marketing. If buyers regularly get stuck on financing, warranty, insurance process, or scope clarity, those are the topics that deserve materials first. Good collateral is built around recurring friction, not around abstract branding goals.",
+        ],
+      },
+      {
+        heading: "Use Website Content as Sales Collateral",
+        paragraphs: [
+          "One of the biggest misses in roofing marketing is keeping the website and the sales process separate. A strong financing page, process page, FAQ page, or material comparison page can also become a sales asset when reps send it during follow-up. This increases the value of each page and keeps messaging consistent across the team.",
+          "Using site content this way also improves internal linking and conversion support. Instead of every rep improvising reassurance on calls, the company can route prospects into assets that were already written for clarity, trust, and search visibility. That creates a cleaner experience for the buyer and a more efficient workflow for the team.",
+        ],
+      },
+      {
+        heading: "Build Estimate Support Materials, Not Just Top-of-Funnel Assets",
+        paragraphs: [
+          "A lot of roofing collateral is aimed at attracting attention, but some of the highest-value materials are used after the inspection. Estimate summaries, scope walkthroughs, warranty explanations, timeline expectations, and comparison sheets all help buyers stay engaged after the proposal is delivered.",
+          "These materials are especially important because many roofing deals go cold after the appointment rather than before it. When the company sends useful, structured support content during follow-up, the buyer is less likely to feel uncertain or drift toward a competitor who seems easier to understand.",
+        ],
+      },
+      {
+        heading: "Financing, Warranty, and Process Pages Often Do More Than Brochures",
+        paragraphs: [
+          "Printed leave-behinds can still be useful, but digital assets often carry more weight because they can be updated, linked, and reused across channels. Financing explanations, warranty breakdowns, and process pages are especially powerful because they address the exact questions that delay decisions.",
+          "This is also where close-rate support and SEO start to overlap. A page built to rank for financing or warranty-related searches can also help reps close current opportunities. When one asset serves both acquisition and follow-up, its return on effort becomes much stronger.",
+        ],
+      },
+      {
+        heading: "Storm and Insurance Work Need Their Own Material Stack",
+        paragraphs: [
+          "Storm and insurance jobs create their own communication needs. Buyers want documentation guidance, realistic timelines, claim-safe language, and clear expectations about inspection, temporary protection, and supplements. If the company does not provide that structure, confusion fills the gap and trust falls quickly.",
+          "A dedicated storm-material stack helps solve that. Instead of forcing reps to explain everything live every time, the business can send assets that standardize the message and reinforce compliance. This makes follow-up clearer for the customer and more repeatable for the team.",
+        ],
+      },
+      {
+        heading: "Measure Whether Materials Improve Sales Behavior",
+        paragraphs: [
+          "The only reason to keep expanding the asset library is if it changes outcomes. Roofing teams should watch estimate-to-close rate, reply rate on follow-up, financing uptake, and the consistency of usage across reps. If an asset is never referenced or never sent, it probably is not solving an important enough problem.",
+          "When materials are measured properly, the company can keep refining the set instead of collecting digital clutter. Over time, the strongest asset stack becomes a real advantage because it improves consistency, reduces buyer confusion, and helps the sales team turn existing demand into more booked work.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "digital-marketing-for-roofers-what-to-build-first",
+    title: "Digital Marketing for Roofers: What to Build First",
+    description:
+      "A practical digital marketing stack for roofers covering SEO, local visibility, content, authority, and response systems.",
+    publishedAt: "2026-04-16",
+    tags: ["Digital Marketing", "SEO", "Roofing Marketing"],
+    relatedResourceSlugs: [
+      "roofing-digital-marketing-infrastructure",
+      "marketing-for-roofing-companies",
+      "roofer-marketing-guide",
+      "roofing-keyword-research-guide",
+    ],
+    sections: [
+      {
+        heading: "Start With the Website and Local Search Basics",
+        paragraphs: [
+          "Digital marketing for roofers should start with the parts of the system that compound: the website, local SEO, review flow, and mobile conversion path. If those assets are weak, paid campaigns and authority work tend to perform below their potential because buyers land on pages that do not clearly explain the service, process, or next step.",
+          "The right starting point is usually simple. Make the core service pages clearer, tighten Google Business Profile alignment, add stronger proof, and ensure phone and form contact paths are obvious on mobile. These are not glamorous changes, but they set the stage for everything else that follows.",
+        ],
+      },
+      {
+        heading: "Use Search Data to Drive the First Content Topics",
+        paragraphs: [
+          "Roofers often guess at blog topics or copy directions when the better move is to use search demand and sales friction together. Search Console patterns, lead questions, and estimate objections usually reveal which topics deserve pages first. That might be financing, storm response, keyword-specific service pages, or educational content that supports follow-up.",
+          "When digital marketing topics come from real demand, the site gets stronger faster. The business is not just publishing for activity; it is building content that answers questions buyers are already asking and linking those answers back to pages that generate revenue.",
+        ],
+      },
+      {
+        heading: "Reviews and Reputation Are Part of Digital Marketing, Not a Side Task",
+        paragraphs: [
+          "Many roofers still treat reputation management like a separate brand project, but it belongs in the digital marketing system. Reviews influence local rankings, buyer trust, click-through behavior, and close rate. A site with weak review signals or inconsistent responses will lose ground even if the SEO work is technically sound.",
+          "This is why review requests, response quality, and trust proof on the site should all be planned together. The stronger the proof architecture becomes, the easier it is for SEO, local search, and even paid landing pages to convert the traffic they bring in.",
+        ],
+      },
+      {
+        heading: "Authority and Links Work Best After the Core Pages Improve",
+        paragraphs: [
+          "Once the main pages and local assets are in better shape, authority layers can accelerate progress. Backlinks, mentions, and distribution help roofers compete for broader or more competitive phrases, but they create the best return when pointed at pages that already have clear intent, relevant copy, and strong conversion support.",
+          "That sequence matters because authority is expensive compared with simple on-page fixes. Digital marketing gets more efficient when the company first strengthens the page that will receive the authority, then adds the link and brand-signal layer only after the landing asset is ready to capitalize on it.",
+        ],
+      },
+      {
+        heading: "Lead Routing and Follow-Up Determine Whether the Stack Pays Off",
+        paragraphs: [
+          "Digital marketing is not done at the click. A roofing company can improve traffic and still underperform if leads are routed slowly, follow-up lacks structure, or no one owns the next step after form submission. That is why response-time standards and estimate support content belong in the digital plan from the beginning.",
+          "The faster the business responds and the clearer the next action is, the more value every SEO page, review, and authority asset creates. Roofers who ignore this usually assume the problem is lead quality when the bigger issue is often what happens after the lead arrives.",
+        ],
+      },
+      {
+        heading: "Scale Only When Economics and Operations Stay Healthy",
+        paragraphs: [
+          "The goal of digital marketing is not to make the dashboard look busy. The goal is to generate margin-safe growth. Before adding more channels, more pages, or more authority spend, roofers should check whether close rate is holding, response time is tight, and the lead mix is improving in the target services and markets.",
+          "That discipline is what turns digital marketing into a growth asset. When the economics stay healthy, the company can scale with confidence. When they do not, the answer is usually better prioritization and better operations, not simply more traffic.",
         ],
       },
     ],

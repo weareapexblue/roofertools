@@ -27,10 +27,16 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: `${product.name} for Roofer SEO`,
+    title: `Buy Backlinks for Roofers: ${product.name}`,
     description: product.summary,
     path: `/backlinks/${product.slug}`,
-    keywords: ["roofing backlinks", "roofer SEO backlinks", "roofer marketing", product.name],
+    keywords: [
+      "buy backlinks for roofers",
+      "roofing backlinks",
+      "roofer SEO backlinks",
+      "roofer marketing",
+      product.name,
+    ],
   });
 }
 

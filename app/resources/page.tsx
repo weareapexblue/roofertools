@@ -3,19 +3,33 @@ import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { SectionHeading } from "@/components/section-heading";
 import { formatBlogDate, getBlogPostReadTime, getLatestBlogPosts } from "@/lib/blog";
-import { resources } from "@/lib/resources";
+import { getResourcesBySlugs, resources } from "@/lib/resources";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing Marketing Resources and SEO Playbooks",
+  title: "Roofing Marketing Resources, Digital Marketing, Keywords, and SEO Guides",
   description:
-    "Explore 20 roofing marketing resources and SEO playbooks covering lead generation, local SEO, backlinks, GBP optimization, content, and ROI.",
+    "Explore roofing marketing resources covering roofer marketing, roofing digital marketing, roofing keywords, content marketing, marketing materials, SEO, and ROI.",
   path: "/resources",
-  keywords: ["marketing for roofers", "roofing marketing tools", "SEO for roofing companies"],
+  keywords: [
+    "roofer marketing",
+    "roofing digital marketing",
+    "marketing for roofing companies",
+    "roofing keywords",
+    "roofing marketing tools",
+  ],
 });
 
 export default function ResourcesIndexPage() {
   const latestBlogPosts = getLatestBlogPosts(3);
+  const priorityResources = getResourcesBySlugs([
+    "roofer-marketing-guide",
+    "marketing-for-roofing-companies",
+    "roofing-digital-marketing-infrastructure",
+    "roofing-keyword-research-guide",
+    "roofing-content-marketing",
+    "roofing-marketing-materials",
+  ]);
 
   return (
     <div className="mx-auto w-full max-w-7xl space-y-10 px-6 py-16 sm:py-20">
@@ -44,15 +58,40 @@ export default function ResourcesIndexPage() {
         <div className="relative">
           <SectionHeading
             eyebrow="Resource Library"
-            title="Authoritative Roofing Marketing Guides"
-            description="Long-form anchor pages built as practical playbooks: query maps, KPI scorecards, execution checklists, and conversion pathways into productized implementation assets."
+            title="Roofer Marketing, Digital Marketing, and SEO Playbooks"
+            description="Long-form anchor pages built around real roofing marketing search demand: query maps, KPI scorecards, execution checklists, and conversion pathways into productized implementation assets."
           />
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <MetricCard label="Published Playbooks" value="20" />
+            <MetricCard label="Published Playbooks" value={String(resources.length)} />
             <MetricCard label="Core Product Paths" value="5" />
             <MetricCard label="Schema-Enhanced FAQs" value="100+" />
           </div>
+        </div>
+      </section>
+
+      <section className="space-y-5 rounded-2xl border border-[var(--border)] bg-[var(--surface-alt)] p-6">
+        <SectionHeading
+          eyebrow="Search Console Priorities"
+          title="Highest-Opportunity Roofing Marketing Topics"
+          description="These guides align to the strongest impression clusters the site has already started surfacing for since March 11, 2026."
+        />
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {priorityResources.map((resource) => (
+            <Link
+              key={resource.slug}
+              href={`/resources/${resource.slug}`}
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">
+                Opportunity Cluster
+              </p>
+              <h2 className="mt-2 text-lg font-semibold tracking-tight text-[var(--text)]">
+                {resource.title}
+              </h2>
+              <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{resource.description}</p>
+            </Link>
+          ))}
         </div>
       </section>
 

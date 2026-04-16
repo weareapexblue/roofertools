@@ -10,6 +10,7 @@ import {
   getBlogPostReadTime,
   getRelatedBlogPosts,
 } from "@/lib/blog";
+import { getResourcesBySlugs } from "@/lib/resources";
 import { buildArticleSchema, buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -57,6 +58,7 @@ export default async function BlogDetailPage({
     id: section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
   }));
   const relatedPosts = getRelatedBlogPosts(post, 3);
+  const relatedResources = getResourcesBySlugs(post.relatedResourceSlugs || []);
 
   return (
     <article className="mx-auto w-full max-w-7xl space-y-8 px-6 py-16 sm:py-20">
@@ -134,6 +136,34 @@ export default async function BlogDetailPage({
           })}
         </div>
       </section>
+
+      {relatedResources.length ? (
+        <section className="space-y-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+          <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+            Related Resource Guides
+          </h2>
+          <p className="text-sm leading-7 text-[var(--muted)]">
+            These long-form guides are the anchor pages tied to this topic cluster and help carry the deeper internal linking structure.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {relatedResources.map((resource) => (
+              <Link
+                key={resource.slug}
+                href={`/resources/${resource.slug}`}
+                className="rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">
+                  Anchor Guide
+                </p>
+                <h3 className="mt-2 text-lg font-semibold tracking-tight text-[var(--text)]">
+                  {resource.title}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--muted)]">{resource.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface-alt)] p-6">
         <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">Conversion Paths</h2>

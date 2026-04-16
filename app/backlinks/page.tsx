@@ -4,11 +4,12 @@ import { getProductsBySilo } from "@/lib/products";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Roofing Backlink Packages for Authority-First Roofer SEO",
+  title: "Buy Backlinks for Roofers | Premium Roofing Backlink Packages",
   description:
-    "Buy premium roofing backlink packages for authority-focused roofer SEO, service-page support, and local ranking momentum with direct checkout.",
+    "Buy backlinks for roofers with premium roofing backlink packages built for authority, local ranking support, and direct checkout.",
   path: "/backlinks",
   keywords: [
+    "buy backlinks for roofers",
     "roofing backlinks",
     "roofing backlink packages",
     "roofer SEO backlinks",
@@ -42,8 +43,8 @@ export default function BacklinksPage() {
       />
       <SiloOverview
         eyebrow="Backlinks"
-        title="Premium Roofing Backlink Packs"
-        description="Hard-to-acquire, niche-relevant authority backlinks built for roofing companies. One-time purchase. No monthly contract. No performance guarantees."
+        title="Buy Backlinks for Roofers With Premium Roofing Backlink Packs"
+        description="Hard-to-acquire, niche-relevant authority backlinks built for roofing companies that want to buy backlinks without relying on spammy vendor packages. One-time purchase. No monthly contract. No performance guarantees."
         products={backlog}
         relatedLinks={[
           { href: "/press-releases", label: "Press Release Distribution" },
